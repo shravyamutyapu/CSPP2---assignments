@@ -9,12 +9,11 @@ final class Solution {
     /**
     Do not modify this main function.
     **/
-    private Solution() {}
+    private Solution() { }
     /**
         @param args this is a parameter
     **/
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) { 
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
@@ -27,7 +26,7 @@ final class Solution {
     @return returning a long
     Need to write the power function and print the output.
     **/
-    static long power(int base, int exponent) {
+    static long power(final int base, final int exponent) {
         //power method
         if (exponent == 0) {
             return 1;
