@@ -5,7 +5,7 @@ import java.util.Scanner;
     *not
      *modify this main function.
     **/
-public class Solution {
+final class Solution {
     /**
     Do not modify this main function.
     **/
