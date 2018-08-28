@@ -36,7 +36,7 @@ final class Solution {
         double result = ((b * b) - 4 * a * c);
         double root1 = (-b + Math.sqrt(result)) / (2 * a);
         double root2 = (-b - Math.sqrt(result)) / (2 * a);
-        System.out.println(root1+" " +root2);
+        System.out.println(root1+ " " +root2);
     }
     /*
     Need to write the rootsOfQuadraticEquation function and print the output.
