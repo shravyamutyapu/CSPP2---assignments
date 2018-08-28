@@ -22,13 +22,16 @@ final class Solution {
         System.out.println(result);
     }
     /**
+    @param base base
+    @param exponent exponent
+    @return returning a long
     Need to write the power function and print the output.
     **/
     static long power(int base, int exponent) {
         //power method
         if (exponent == 0) {
             return 1;
-        } else if(base == 0) {
+        } else if (base == 0) {
             return 0;
         } else {
             return base * power(base, exponent - 1);
