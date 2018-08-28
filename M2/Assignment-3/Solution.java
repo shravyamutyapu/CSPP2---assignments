@@ -1,10 +1,10 @@
+
+import java.util.Scanner;
 /**
    * Do
     *not
      *modify this main function.
     **/
-import java.util.Scanner;
-
 public class Solution {
     /**
     Do not modify this main function.
@@ -28,7 +28,8 @@ public class Solution {
             return 1;
         }
         else if(base == 0) {
-            return 0; }
+            return 0;
+        }
         else {
             return base * power(base, exponent - 1); }
     }
