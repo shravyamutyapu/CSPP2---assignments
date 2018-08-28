@@ -9,11 +9,12 @@ final class Solution {
     /**
     Do not modify this main function.
     **/
-    private Solution() { } 
+    private Solution() {}
+    /**
+        @param args this is a parameter
+    **/
     public static void main(String[] args) {
-        /*main
-        method
-            */
+        
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
@@ -27,12 +28,11 @@ final class Solution {
         //power method
         if (exponent == 0) {
             return 1;
-        }
-        else if(base == 0) {
+        } else if(base == 0) {
             return 0;
+        } else {
+            return base * power(base, exponent - 1);
         }
-        else {
-            return base * power(base, exponent - 1); }
     }
 }
 
