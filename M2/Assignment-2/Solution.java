@@ -26,13 +26,13 @@ final class Solution {
         int c = scan.nextInt();
         rootsOfQuadraticEquation(a, b, c);
     }
-    /** 
+    /**.
     * { function_description}
      @param a {parameter a}
      @param b {paramtere b}
      @param c {paramter c}
      **/
-    public static void rootsOfQuadraticEquation(final int a, int b, int c) {
+    public static void rootsOfQuadraticEquation(final int a, final  int b, final int c) {
         double result = ((b * b) - 4 * a * c);
         double root_1= (-b + Math.sqrt(result))/(2 * a);
         double root_2= (-b - Math.sqrt(result))/(2 * a);
