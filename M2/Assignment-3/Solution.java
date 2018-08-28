@@ -9,6 +9,7 @@ public class Solution {
     /**
     Do not modify this main function.
     **/
+    private Solution() { } 
     public static void main(String[] args) {
         /*main
         method
