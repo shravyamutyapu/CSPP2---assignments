@@ -33,7 +33,8 @@ final class Solution {
      @param c {paramter c}
      **/
     public static void rootsofQuadeqn(final int a, final  int b, final int c) {
-        double result = ((b * b) - 4 * a * c);
+        final int t = 4;
+        double result = ((b * b) - t * a * c);
         double root1 = (-b + Math.sqrt(result)) / (2 * a);
         double root2 = (-b - Math.sqrt(result)) / (2 * a);
         System.out.println(root1 + " " + root2);
