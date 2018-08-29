@@ -12,7 +12,6 @@ public class Solution {
     /**
      * @brief [brief description]
      * @details [long description]
-     * 
      * @param args [description]
      **/
 
