@@ -24,7 +24,7 @@ public class Solution {
      * @param  n1 [description]
      * @param  n2 [variable n2]
      **/
-    if(n2 == 0){
+    if (n2 == 0) {
         return n1;
     }
     else {
