@@ -27,7 +27,7 @@ public class Solution {
     Need to write the gcd function and print the output.
     */
   public static int gcd(final int n1, final int n2) {
-   /** 
+   /**
      *@param n1 [variable]
      *@param n2 [variable]
      **/
