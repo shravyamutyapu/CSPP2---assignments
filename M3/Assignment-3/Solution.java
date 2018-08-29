@@ -1,4 +1,7 @@
+/**
+    * @brief [brief description]
 
+ **/
 import java.util.Scanner;
 /*
     Do not modify this main function.
