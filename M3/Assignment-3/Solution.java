@@ -7,7 +7,9 @@ import java.util.Scanner;
     Do not modify this main function.
     */
 public class Solution {
-    /** empty constructor. **/
+    /** 
+        *empty constructor.
+        * **/
     protected Solution() { }
     /**
      * @brief [brief description]
