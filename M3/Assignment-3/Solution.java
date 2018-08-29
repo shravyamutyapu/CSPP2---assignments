@@ -3,9 +3,9 @@
 
  **/
 import java.util.Scanner;
-/*
+/**
     Do not modify this main function.
-    */
+    **/
 public class Solution {
     /**
         *empty constructor.
@@ -25,9 +25,9 @@ public class Solution {
         //gcd(n1,n2);
         System.out.println(gcd(n1, n2));
     }
-    /*
+    /**
     Need to write the gcd function and print the output.
-    */
+    **/
   public static int gcd(final int n1, final int n2) {
    /**
     *@param n1 [variable]
