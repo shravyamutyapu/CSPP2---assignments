@@ -1,5 +1,5 @@
 /**
-    * @brief [brief description]
+    * @brief [brief description].
 
  **/
 import java.util.Scanner;
