@@ -4,6 +4,12 @@ import java.util.Scanner;
     Do not modify this main function.
     */
 public class Solution {
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param args [description]
+     **/
 
     public static void main(String[] args) {
 
