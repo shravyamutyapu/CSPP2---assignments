@@ -30,8 +30,8 @@ public class Solution {
     */
   public static int gcd(final int n1, final int n2) {
    /**
-     *@param n1 [variable]
-     *@param n2 [variable]
+    *@param n1 [variable]
+    *@param n2 [variable]
      **/
     if (n2 == 0) {
         return n1;
