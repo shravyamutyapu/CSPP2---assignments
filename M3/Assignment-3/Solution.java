@@ -28,10 +28,8 @@ public class Solution {
     /**
      * @brief [brief description]
      * @details [long description]
-     * 
      * @param n1 [description]
      * @param n2 [description]
-     * 
      * @return [returns integer]
      **/
   public static int gcd(final int n1, final int n2) {
