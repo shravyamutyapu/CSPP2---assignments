@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 public class Solution
 {/*
 	Fill this main function to print maximum of given array
@@ -12,7 +12,7 @@ public class Solution
 		arr = new int[n];
 		for(int i=0;i<n;i++){
 
-     	arr[i]=new Scanner(System.in).nextInt();
+     	arr[i]=sc.nextInt();
         }
         int temp = arr[0];
         for(int i=0;i<n;i++){
