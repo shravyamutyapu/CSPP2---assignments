@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Solution {
-    /* Fill the main function to print resultant of addition of matrices*/
+    /**Fill the main function to print resultant of addition of matrices**/
     public static void main(final String[] args) {
       int[][] arr1;
       int[][] arr2;
@@ -26,7 +26,7 @@ public class Solution {
         sum = new int[r1][c1];
         for (int i = 0; i < r2; i++) {
         for (int j = 0; j < c2; j++) {
-             sum[i][j] = arr1[i][j] + arr2[i][j];      
+             sum[i][j] = arr1[i][j] + arr2[i][j]; 
 }
         }
 
@@ -37,7 +37,7 @@ public class Solution {
                 System.out.print(" ");
 }
       }
-    System.out.println(""); 
+    System.out.println("");
     }
 } else {
     System.out.println("not possible");
