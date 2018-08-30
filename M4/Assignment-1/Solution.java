@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 /** Java
     main method.
     **/
@@ -15,7 +15,7 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int arr[];
+        int[] arr;
         arr = new int[n];
         for (int i = 0; i < n; i++) {
         arr[i] = sc.nextInt();
