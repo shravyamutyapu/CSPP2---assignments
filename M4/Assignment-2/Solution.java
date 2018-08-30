@@ -1,6 +1,15 @@
 import java.util.Scanner;
+/**
+ * @brief [brief description]
+ * @details [long description]
+ */
 public class Solution {
-    /**Fill the main function to print resultant of addition of matrices**/
+     /**
+    *default constructor.
+    **/
+    private Solution() { }
+    /**Fill the main function to print
+     resultant of addition of matrices**/
     public static void main(final String[] args) {
       int[][] arr1;
       int[][] arr2;
