@@ -26,18 +26,18 @@ public class Solution {
         sum = new int[r1][c1];
         for (int i = 0; i < r2; i++) {
         for (int j = 0; j < c2; j++) {
-             sum[i][j] = arr1[i][j] + arr2[i][j];             
+             sum[i][j] = arr1[i][j] + arr2[i][j];      
 }
         }
 
-     for (int i = 0; i < r2; i++){
-        for (int j = 0; j < c2; j++){
+     for (int i = 0; i < r2; i++) {
+        for (int j = 0; j < c2; j++) {
             System.out.print(sum[i][j]);
-             if (j < c2-1) {
+             if (j < c2 - 1) {
                 System.out.print(" ");
-} 
+}
       }
-    System.out.println("");    
+    System.out.println(""); 
     }
 } else {
     System.out.println("not possible");
