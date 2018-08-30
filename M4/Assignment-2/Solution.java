@@ -1,8 +1,7 @@
 import java.util.Scanner;
 /**
- * @brief [brief description]
- * @details [long description]
- */
+program
+ **/
 public final class Solution {
      /**
     *default constructor.
@@ -40,8 +39,8 @@ public final class Solution {
         sum = new int[r1][c1];
         for (int i = 0; i < r2; i++) {
         for (int j = 0; j < c2; j++) {
-             sum[i][j] = arr1[i][j] + arr2[i][j]; 
-}
+             sum[i][j] = arr1[i][j] + arr2[i][j];
+         }
         }
 
      for (int i = 0; i < r2; i++) {
