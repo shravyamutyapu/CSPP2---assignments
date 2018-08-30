@@ -1,14 +1,12 @@
 import java.util.*;
 /** Java
-    main method
+    main method.
     **/
-public class Solution {
+public final class Solution {
     /**
     *default constructor.
     **/
     private Solution() { }
-
-
 /**
  * @brief [brief description]
  * @details [long description]
