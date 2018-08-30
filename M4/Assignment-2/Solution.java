@@ -10,6 +10,12 @@ public class Solution {
     private Solution() { }
     /**Fill the main function to print
      resultant of addition of matrices**/
+     /**
+      * @brief [brief description]
+      * @details [long description]
+      * 
+      * @param args [description]
+      */
     public static void main(final String[] args) {
       int[][] arr1;
       int[][] arr2;
@@ -29,7 +35,7 @@ public class Solution {
       for (int i = 0; i < r2; i++) {
         for (int j = 0; j < c2; j++) {
             arr2[i][j] = sc.nextInt();
-        }
+    }
       }
       if ((r1 == r2) && (c1 == c2)) {
         sum = new int[r1][c1];
