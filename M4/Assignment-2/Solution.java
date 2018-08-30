@@ -3,7 +3,7 @@ import java.util.Scanner;
  * @brief [brief description]
  * @details [long description]
  */
-public class Solution {
+public final class Solution {
      /**
     *default constructor.
     **/
@@ -13,7 +13,6 @@ public class Solution {
      /**
       * @brief [brief description]
       * @details [long description]
-      * 
       * @param args [description]
       */
     public static void main(final String[] args) {
