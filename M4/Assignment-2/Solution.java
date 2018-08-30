@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
     public static void main(final String[] args) {
@@ -9,8 +9,8 @@ public class Solution {
       int r1 = sc.nextInt();
       int c1 = sc.nextInt();
       arr1 = new int[r1][c1];
-      for (int i = 0; i < r1; i++){
-        for (int j = 0; j < c1; j++){
+      for (int i = 0; i < r1; i++) {
+        for (int j = 0; j < c1; j++) {
             arr1[i][j] = sc.nextInt();
         }
       }
@@ -22,16 +22,16 @@ public class Solution {
             arr2[i][j] = sc.nextInt();
         }
       }
-      if ((r1==r2) && (c1 == c2)) {
+      if ((r1 == r2) && (c1 == c2)) {
         sum = new int[r1][c1];
-        for(int i = 0; i < r2; i++){
-        for(int j=0; j < c2; j++){
+        for (int i = 0; i < r2; i++){
+        for (int j = 0; j < c2; j++){
              sum[i][j] = arr1[i][j] + arr2[i][j];             
 }
         }
 
-     for(int i = 0; i < r2; i++){
-        for(int j = 0; j < c2; j++){
+     for (int i = 0; i < r2; i++){
+        for (int j = 0; j < c2; j++){
             System.out.print(sum[i][j]);
              if (j < c2-1) {
                 System.out.print(" ");
@@ -39,7 +39,7 @@ public class Solution {
       }
     System.out.println("");    
     }
-}else {
+} else {
     System.out.println("not possible");
  }
 }
