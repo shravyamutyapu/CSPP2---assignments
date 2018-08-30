@@ -7,7 +7,7 @@ public class Solution {
  * @param args [description]
  **/
     
-    public static void main(final String[] args) {   
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int arr[];
@@ -16,8 +16,8 @@ public class Solution {
         arr[i] = sc.nextInt();
         }
         int temp = arr[0];
-        for(int i = 0;i < n;i++) {
-            if(arr[i] > temp){
+        for(int i = 0 ; i < n ; i++) {
+            if (arr[i] > temp){
                 temp = arr[i];
             }
         }
