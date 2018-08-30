@@ -12,12 +12,12 @@ public class Solution {
         int n = sc.nextInt();
         int arr[];
         arr = new int[n];
-        for(int i = 0;i < n;i++) {
+        for(int i = 0 ; i < n ; i++) {
         arr[i] = sc.nextInt();
         }
         int temp = arr[0];
         for(int i = 0 ; i < n ; i++) {
-            if (arr[i] > temp){
+            if (arr[i] > temp) {
                 temp = arr[i];
             }
         }
