@@ -24,8 +24,8 @@ public class Solution {
       }
       if ((r1 == r2) && (c1 == c2)) {
         sum = new int[r1][c1];
-        for (int i = 0; i < r2; i++){
-        for (int j = 0; j < c2; j++){
+        for (int i = 0; i < r2; i++) {
+        for (int j = 0; j < c2; j++) {
              sum[i][j] = arr1[i][j] + arr2[i][j];             
 }
         }
@@ -35,7 +35,7 @@ public class Solution {
             System.out.print(sum[i][j]);
              if (j < c2-1) {
                 System.out.print(" ");
-             } 
+} 
       }
     System.out.println("");    
     }
