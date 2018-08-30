@@ -1,5 +1,11 @@
 import java.util.*;
 public class Solution {
+    /**
+    *default constructor.
+    **/
+    private Solution() { }
+
+
 /**
  * @brief [brief description]
  * @details [long description]
