@@ -1,4 +1,7 @@
 import java.util.*;
+/** Java
+    main method
+    **/
 public class Solution {
     /**
     *default constructor.
