@@ -1,11 +1,15 @@
-
-/**Given an String, Write a java
+/**Given an String, Write a java.
  method
  that returns the decimal value for the
   given binary string.
   **/
 import java.util.Scanner;
-public class Solution {/**
+/**
+ * @brief [brief description]
+ * @details [long description]
+**/
+public class Solution {
+/**
     Do not modify the main function
     **/
     private Solution() { }
@@ -20,10 +24,17 @@ public class Solution {/**
         String reverse = reverseString(s);
         System.out.println(reverse);
     }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param s [description]
+     * @return [string]
+     */
     public static String reverseString(final String s) {
             String revers = "";
             // char[] s1=s.toCharArray();
-            for (int i = s.length()-1; i >= 0; i--) {
+            for (int i = s.length() - 1; i >= 0; i--) {
             revers = revers + s.charAt(i);
             }
         return revers;
