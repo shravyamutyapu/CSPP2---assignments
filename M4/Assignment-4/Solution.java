@@ -8,7 +8,7 @@ import java.util.Scanner;
  Class starts here.
 **/
 public final class Solution {
-/**. 
+/**.
     Do not modify the main function
     **/
     private Solution() { }
