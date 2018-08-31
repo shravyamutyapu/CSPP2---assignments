@@ -9,11 +9,11 @@ import java.util.Scanner;
  * @details [long description]
 **/
 public class Solution {
-/**
+/**. 
     Do not modify the main function
     **/
     private Solution() { }
-    /**
+    /**.
      * @brief [brief description]
      * @details [long description]
      * @param args [description]
@@ -24,7 +24,7 @@ public class Solution {
         String reverse = reverseString(s);
         System.out.println(reverse);
     }
-    /**
+    /**.
      * @brief [brief description]
      * @details [long description]
      * 
