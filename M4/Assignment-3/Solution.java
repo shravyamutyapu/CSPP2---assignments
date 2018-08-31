@@ -28,7 +28,6 @@ public final class Solution {
     /**
      * @brief [brief description]
      * @details [long description]
-     * 
      * @param s [description]
      * @return [description]
      */
