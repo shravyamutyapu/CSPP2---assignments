@@ -4,11 +4,10 @@
   given binary string.
   **/
 import java.util.Scanner;
-/**
- * @brief [brief description]
- * @details [long description]
+/**.
+ Class starts here.
 **/
-public class Solution {
+public final class Solution {
 /**. 
     Do not modify the main function
     **/
@@ -27,7 +26,6 @@ public class Solution {
     /**.
      * @brief [brief description]
      * @details [long description]
-     * 
      * @param s [description]
      * @return [string]
      */
