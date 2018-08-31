@@ -8,7 +8,14 @@ import java.util.Scanner;
 public class Solution {/**
     Do not modify the main function 
     **/
-    public static void main(String[] args) {
+    private Solution() { }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param args [description]
+     **/
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String reverse = reverseString(s);
@@ -16,11 +23,11 @@ public class Solution {/**
         
     }
     public static String reverseString(String s) {
-            String reverse = "";
+            String revers = "";
             // char[] s1=s.toCharArray();
             for(int i = s.length()-1; i >= 0; i--) {
-            reverse = reverse + s.charAt(i);
+            revers = revers + s.charAt(i);
             }
-        return reverse;
+        return revers;
     }
 }
