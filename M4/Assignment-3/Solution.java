@@ -8,13 +8,12 @@ import java.util.Scanner;
 /**.
    Class starts here.
  **/
-public class Solution {
+public final class Solution {
     /** default constructor. **/
     private Solution() { }
     /**.
      * @brief [brief description]
      * @details [long description]
-     * 
      * @param args [description]
      */
     public static void main(final String[] args) {
@@ -26,6 +25,13 @@ public class Solution {
             System.out.println(res);
         }
     }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param s [description]
+     * @return [description]
+     */
     public static int binaryToDecimal(final String s) {
         double res = 0;
         for (int i = 0; i < s.length(); i++) {
