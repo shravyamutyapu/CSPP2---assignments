@@ -5,24 +5,27 @@
 
 
 import java.util.Scanner;
+/**
+ * @brief [brief description]
+ * @details [long description]
+ * 
+ * @param String [description]
+ **/
 public class Solution
-{/*
-	Do not modify this main function.
-	*/
-	public static void main(String[] args)
-	{
+{ 
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		for(int i = 0; i<n; i++){
+		for (int i = 0; i<n; i++) {
 			String s = sc.next();
 			int res = binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
 		}
 	}
-	public static int binaryToDecimal(String s){
+	public static int binaryToDecimal(final String s) {
 		double res = 0;
-		for (int i = 0; i<s.length(); i++) {
-			if (s.charAt(i) == '1'){
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == '1') {
 			res = res + Math.pow(2, s.length() - 1 - i);
 
 			}
