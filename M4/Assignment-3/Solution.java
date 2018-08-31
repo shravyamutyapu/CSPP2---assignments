@@ -8,7 +8,15 @@ import java.util.Scanner;
 /**.
    Class starts here.
  **/
-public class Solution { 
+public class Solution {
+    /** default constructor. **/
+    private Solution() { }
+    /**.
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param args [description]
+     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
