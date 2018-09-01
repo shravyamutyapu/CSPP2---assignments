@@ -27,28 +27,39 @@ final class Solution {
     // write ypur code here
         for (int i = 0; i < a[0].length; i++) {
             for (int j = 0; j<a.length; j++) {
-                if (a[i][j] < 50)
+                if (a[i][j] < 50) {
                     a[i][j] = 0;
-                else if (a[i][j] >= 50 && a[i][j] <= 100)
+                }
+                else if (a[i][j] >= 50 && a[i][j] <= 100) {
                     a[i][j] = 100;
-                else if (a[i][j] > 100 && a[i][j] <= 150)
+                }
+                else if (a[i][j] > 100 && a[i][j] <= 150) {
                     a[i][j] = 100;
-                else if (a[i][j] > 150 && a[i][j] <= 200)
+                }
+                else if (a[i][j] > 150 && a[i][j] <= 200) {
                     a[i][j] = 200;
-                else if (a[i][j] > 200 && a[i][j] <= 250)
+                }
+                else if (a[i][j] > 200 && a[i][j] <= 250) {
                     a[i][j] = 200;
-                else if (a[i][j] > 250 && a[i][j] <= 300)
+                }
+                else if (a[i][j] > 250 && a[i][j] <= 300) {
                     a[i][j] = 300;
-                else if (a[i][j] > 300 && a[i][j] <= 350)
+                }
+                else if (a[i][j] > 300 && a[i][j] <= 350) {
                     a[i][j] = 300;
-                else if (a[i][j] > 350 && a[i][j] <= 400)
+                }
+                else if (a[i][j] > 350 && a[i][j] <= 400) {
                     a[i][j] = 400;
-                else if (a[i][j] > 400 && a[i][j] <= 450)
+                }
+                else if (a[i][j] > 400 && a[i][j] <= 450) {
                     a[i][j] = 400;
-                else if (a[i][j] > 450 && a[i][j] <= 500)
+                }
+                else if (a[i][j] > 450 && a[i][j] <= 500) {
                     a[i][j] = 500;
-                else if (a[i][j] > 500 && a[i][j] <= 550)
+                }
+                else if (a[i][j] > 500 && a[i][j] <= 550) {
                     a[i][j] = 500;
+                }
             }
         }
         return a;
