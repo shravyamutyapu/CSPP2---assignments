@@ -1,7 +1,7 @@
 import java.util.Scanner;
 /**
  * Write a java program to round the
- * elements of a matrix to the nearest 100.
+ * elements of a matrix to the nearest c.
  *
  * @author : 
  */
@@ -25,30 +25,41 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
     // write ypur code here
+        final int b = 50;
+        final int c = 100;
+        final int d = 150;
+        final int e = 200;
+        final int f = 250;
+        final int g = 300;
+        final int h = 350;
+        final int l = 400;
+        final int m = 450;
+        final int p = 500;
+
         for (int i = 0; i < a[0].length; i++) {
             for (int j = 0; j<a.length; j++) {
-                if (a[i][j] < 50) {
+                if (a[i][j] < b) {
                     a[i][j] = 0;
-                } else if (a[i][j] >= 50 && a[i][j] <= 100) {
-                    a[i][j] = 100;
-                } else if (a[i][j] > 100 && a[i][j] <= 150) {
-                    a[i][j] = 100;
-                } else if (a[i][j] > 150 && a[i][j] <= 200) {
-                    a[i][j] = 200;
-                } else if (a[i][j] > 200 && a[i][j] <= 250) {
-                    a[i][j] = 200;
-                } else if (a[i][j] > 250 && a[i][j] <= 300) {
-                    a[i][j] = 300;
-                } else if (a[i][j] > 300 && a[i][j] <= 350) {
-                    a[i][j] = 300;
-                } else if (a[i][j] > 350 && a[i][j] <= 400) {
-                    a[i][j] = 400;
-                } else if (a[i][j] > 400 && a[i][j] <= 450) {
-                    a[i][j] = 400;
-                } else if (a[i][j] > 450 && a[i][j] <= 500) {
-                    a[i][j] = 500;
-                } else if (a[i][j] > 500 && a[i][j] <= 550) {
-                    a[i][j] = 500;
+                } else if (a[i][j] >= b && a[i][j] <= c) {
+                    a[i][j] = c;
+                } else if (a[i][j] > c && a[i][j] <= d) {
+                    a[i][j] = c;
+                } else if (a[i][j] > d && a[i][j] <= e) {
+                    a[i][j] = e;
+                } else if (a[i][j] > e && a[i][j] <= f) {
+                    a[i][j] = e;
+                } else if (a[i][j] > f && a[i][j] <= g) {
+                    a[i][j] = g;
+                } else if (a[i][j] > g && a[i][j] <= h) {
+                    a[i][j] = g;
+                } else if (a[i][j] > h && a[i][j] <= l) {
+                    a[i][j] = l;
+                } else if (a[i][j] > l && a[i][j] <= m) {
+                    a[i][j] = l;
+                } else if (a[i][j] > m && a[i][j] <= p) {
+                    a[i][j] = p;
+                } else if (a[i][j] > p && a[i][j] <= 550) {
+                    a[i][j] = p;
                 }
             }
         }
