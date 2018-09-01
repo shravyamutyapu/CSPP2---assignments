@@ -3,7 +3,7 @@ import java.util.Scanner;
  * Write a java program to round the
  * elements of a matrix to the nearest c.
  *
- * @author : 
+ * @author :
  */
 final class Solution {
     /**
@@ -22,7 +22,7 @@ final class Solution {
      *
      * @return     Matrix of the rounded elements
      */
-    static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+    static int[][] rndHun(final int[][] a, final int rows, final int columns) {
 
     // write ypur code here
         final int b = 50;
@@ -35,9 +35,10 @@ final class Solution {
         final int l = 400;
         final int m = 450;
         final int p = 500;
+        final int q = 550;
 
         for (int i = 0; i < a[0].length; i++) {
-            for (int j = 0; j<a.length; j++) {
+            for (int j = 0; j < a.length; j++) {
                 if (a[i][j] < b) {
                     a[i][j] = 0;
                 } else if (a[i][j] >= b && a[i][j] <= c) {
@@ -58,7 +59,7 @@ final class Solution {
                     a[i][j] = l;
                 } else if (a[i][j] > m && a[i][j] <= p) {
                     a[i][j] = p;
-                } else if (a[i][j] > p && a[i][j] <= 550) {
+                } else if (a[i][j] > p && a[i][j] <= q) {
                     a[i][j] = p;
                 }
             }
@@ -80,7 +81,7 @@ final class Solution {
                 a[i][j] = scan.nextInt();
             }
         }
-        int[][] b = roundHundred(a, m, n);
+        int[][] b = rndHun(a, m, n);
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n - 1; j++) {
                 System.out.print(b[i][j] + " ");
