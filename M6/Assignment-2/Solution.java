@@ -25,7 +25,7 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
 	// write ypur code here
-        for(int i=0;i<a[0].length;i++){
+        for(int i=0;i<a[0].length-1;i++){
             for(int j=0;j<a.length;j++){
                 if(a[i][j]<50)
                     a[i][j]=0;
