@@ -8,7 +8,7 @@ import java.util.Arrays;
 final class Solution {
     /**
      * Constructs the object.
-     */
+     **/
     private Solution() {
         //not used
     }
@@ -22,12 +22,12 @@ final class Solution {
      * @param      newChar    The new character
      *
      * @return     new character array with replaced characters
-     */
+     **/
     static char[] replaceAll(final char[] charArray,
         final char oldChar, final char newChar) {
-	for(int i=0;i<charArray.length;i++){
-        if(charArray[i] == oldChar)
-            charArray[i]=newChar;
+	for (int i=0; i < charArray.length; i++) {
+        if (charArray[i] == oldChar)
+            charArray[i] = newChar;
     }
     return charArray;
     }
