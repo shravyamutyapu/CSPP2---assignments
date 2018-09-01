@@ -28,11 +28,12 @@ public final class Solution {
     			else {
     				temp = 0;
     			}
-    		}
-    		if(temp==1){
+    			if(temp==1){
     			if(i%2==0){
     				System.out.println(i);
     			}
+    		}
+    		
     		}
     	}
     }
