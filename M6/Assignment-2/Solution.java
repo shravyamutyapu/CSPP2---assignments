@@ -29,7 +29,7 @@ final class Solution {
             for(int j=0;j<a.length;j++){
                 if(a[i][j]<50)
                     a[i][j]=0;
-                else if(a[i][j]>=50)
+                else if(a[i][j]>=50 && a[i][j]<=100)
                     a[i][j]=100;
                 else if(a[i][j]>100 && a[i][j]<=150)
                     a[i][j]=100;
