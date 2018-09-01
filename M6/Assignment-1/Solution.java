@@ -24,13 +24,14 @@ public final class Solution {
     		for(int j = 2; j < n ; j++) {
     			if(i%j==0) {
     				temp = 1;
+    				{
+    			if(i%2==0){
+    				System.out.println(i);
     			}
     			else {
     				temp = 0;
     			}
-    			if(temp==1){
-    			if(i%2==0){
-    				System.out.println(i);
+
     			}
     		}
     		
