@@ -25,7 +25,7 @@ final class Solution {
     static int[][] rndHun(final int[][] a, final int rows, final int columns) {
      for (int i = 0; i < a[0].length; i++) {
             for (int j = 0; j < a.length; j++){
-                a[i][j] = ((a[i][j]%100)*100);
+                a[i][j] = ((a[i][j]/100)*100);
 
      }
  }
