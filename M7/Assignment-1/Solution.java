@@ -20,12 +20,18 @@ import java.util.Scanner;
     return false;
 }
 }
-final class Solution {
+/**
+ * @brief [brief description]
+ * @details [long description]
+ * @return [description]
+ */
+final class Solution 
+{
     private Solution() { }
     public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
-        InputValidator i = new InputValidator(input);       
+        InputValidator i = new InputValidator(input);
         System.out.println(i.validateData());
     }
 }
