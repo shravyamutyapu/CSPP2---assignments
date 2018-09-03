@@ -14,7 +14,7 @@ import java.util.Scanner;
            Declaring string length
         **/
         private int len;
-        /** 
+        /**
          * @param str1 input.
          **/
         InputValidator(final String str1) {
@@ -50,4 +50,5 @@ constructor.
         System.out.println(i.validateData());
     }
 }
+
 
