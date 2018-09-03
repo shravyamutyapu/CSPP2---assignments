@@ -1,3 +1,6 @@
+/**
+ *
+ */
 import java.util.Scanner;
     final class InputValidator {
         /**.
@@ -20,10 +23,18 @@ import java.util.Scanner;
     return false;
 }
 }
-
+/**
+ * Final class.
+ **/
 final class Solution {
+    /**
+constructor.
+     **/
     private Solution() { }
-    public static void main(final String args[]) {
+    /**
+     * @param args.
+     **/
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);
