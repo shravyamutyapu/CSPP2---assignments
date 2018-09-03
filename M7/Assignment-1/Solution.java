@@ -10,25 +10,20 @@ import java.util.Scanner;
         private int len;
         InputValidator(final String str1) {
         str = str1;
-        len = str.length(); 
+        len = str.length();
         }
         public boolean validateData() {
     final int b = 6;
-    if(len >= b){
+    if (len >= b) {
         return true;
     }
     return false;
 }
 }
-/**
- * @brief [brief description]
- * @details [long description]
- * @return [description]
- */
-final class Solution 
-{
+
+final class Solution {
     private Solution() { }
-    public static void main(String args[]) {
+    public static void main(final String args[]) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);
