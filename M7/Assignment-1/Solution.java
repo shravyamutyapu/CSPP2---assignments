@@ -2,6 +2,9 @@
  *
  */
 import java.util.Scanner;
+/**
+ * class. 
+ **/
     final class InputValidator {
         /**.
            Declaring a string.
