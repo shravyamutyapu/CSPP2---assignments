@@ -8,12 +8,6 @@ import java.util.Scanner;
 		   Declaring string length 
 		**/
 	    private int len;
-	    /**
-	     * @brief [brief description]
-	     * @details [long description]
-	     * 
-	     * @param str1 [description]
-	     **/
 	    InputValidator(final String str1) {
 	    str = str1;
         len = str.length();	
