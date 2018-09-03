@@ -1,11 +1,11 @@
 import java.util.Scanner;
     final class InputValidator {
-        /** 
-           Declaring a string 
+        /**.
+           Declaring a string.
         **/
         private String str;
-        /** 
-           Declaring string length 
+        /**.
+           Declaring string length
         **/
         private int len;
         InputValidator(final String str1) {
