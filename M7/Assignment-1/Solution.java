@@ -3,7 +3,7 @@
  */
 import java.util.Scanner;
 /**
- * class. 
+ * class.
  **/
     final class InputValidator {
         /**.
@@ -14,10 +14,16 @@ import java.util.Scanner;
            Declaring string length
         **/
         private int len;
+        /** 
+         * @param str1 input.
+         **/
         InputValidator(final String str1) {
         str = str1;
         len = str.length();
         }
+        /**
+         * @return true or false.
+         **/
         public boolean validateData() {
     final int b = 6;
     if (len >= b) {
@@ -35,7 +41,7 @@ constructor.
      **/
     private Solution() { }
     /**
-     * @param args.
+     * @param args input string.
      **/
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
