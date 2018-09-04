@@ -83,7 +83,7 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size] = item;
         size = size + 1;
@@ -102,7 +102,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -139,10 +139,10 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public void get(int index) {
+    public void get(final int index) {
         // Replace the code below to write the code for get
         if (index >= 0 && index < size) {
             System.out.println(arr[index]);
@@ -177,7 +177,7 @@ public class List {
         }
         res += arr[size - 1] + "]";
         return res;
-    } 
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -187,7 +187,7 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-            if (arr[i] == item){
+            if (arr[i] == item) {
             return true;
          }
         }
@@ -195,7 +195,7 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
