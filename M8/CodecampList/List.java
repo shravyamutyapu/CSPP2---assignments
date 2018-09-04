@@ -1,6 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-/**
+/**.
 class starts here
  **/
 public class List {
@@ -79,7 +79,7 @@ public class List {
         arr = new int[ten];
         size = 0;
     }
-    /*
+    /**
      * The add method does what the name suggests.
      * Add an int item to the list.
      * The assumption is to store the item at the end of the list
@@ -89,7 +89,7 @@ public class List {
      * to the list.
      *
      * The method returns void (nothing)
-     */
+     **/
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size] = item;
