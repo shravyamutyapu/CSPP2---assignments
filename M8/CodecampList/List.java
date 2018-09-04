@@ -25,7 +25,6 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     private int[] arr;
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -127,12 +126,12 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index>=0  && index<size) {
-         for (int i=index;i<size-1;i++) {
+        if (index >= 0  && index < size) {
+         for (int i = index; i < size-1; i++) {
             arr[i] = arr[i+1];
          }
      
-         arr[size]=0;
+         arr[size] = 0;
          size--;
      }
          else{
@@ -183,7 +182,7 @@ public class List {
     public String toString() {
         // Replace the code below
         String res = "[";
-        for (int i = 0; i<size-1;i++) {
+        for (int i = 0; i < size-1; i++) {
             res = res + arr[i] + ",";
         }
         res += arr[size-1] + "]";
@@ -198,7 +197,7 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for (int i = 0; i<size;i++) {
+        for (int i = 0; i < size; i++) {
             if (arr[i] == item) return true;
         }
         return false;
@@ -211,8 +210,8 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for (int i = 0; i<size;i++) {
-            if (arr[i]==item) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == item) {
                 return i;
             }
 
