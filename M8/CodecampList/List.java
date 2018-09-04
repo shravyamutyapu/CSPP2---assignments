@@ -69,9 +69,9 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        arr = new int[10];
+        final int ten = 10;
+        arr = new int[ten];
         size = 0;
-
     }
     
     /*
@@ -127,12 +127,12 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0  && index < size) {
-         for (int i = index; i < size-1; i++) {
-            arr[i] = arr[i+1];
+         for (int i = index; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
          }
      
          arr[size] = 0;
-         size--;
+         size = size - 1;
      }
          else{
             System.out.println("Invalid Position Exception");
@@ -188,7 +188,6 @@ public class List {
         res += arr[size-1] + "]";
         return res;
     } 
-    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -259,6 +258,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
