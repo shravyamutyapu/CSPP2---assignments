@@ -90,6 +90,9 @@ public class List {
      *
      * The method returns void (nothing)
      **/
+    /**
+     * @param item int.
+     **/
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size] = item;
@@ -101,11 +104,14 @@ public class List {
      * to the objects outside the list
      * The method returns an int. Empty list should return 0.
      **/
+    /**
+     * @return size.
+     **/
     public int size() {
         // replace the code below to implement the size method
         return size;
     }
-    /*
+    /**
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
@@ -124,7 +130,10 @@ public class List {
      * So, the new array looks like this.
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
-     */
+     **/
+    /**
+     * @param index int.
+     **/
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -138,7 +147,7 @@ public class List {
             System.out.println("Invalid Position Exception");
         }
     }
-    /*
+    /**
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
      * If the item doesn't exist then return a -1 to indicate that
@@ -148,6 +157,9 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     **/
+    /**
+     * @param index int.
      */
     public void get(final int index) {
         // Replace the code below to write the code for get
@@ -176,6 +188,9 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * @return string.
+     */
     public String toString() {
         // Replace the code below
         String res = "[";
@@ -191,6 +206,10 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * @param item int.
+     * @return true or false.
+     **/
     public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -206,6 +225,10 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
+    /**
+     * @param item int.
+     * @return i.
+     **/
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -216,7 +239,9 @@ public class List {
         }
         return -1;
     }
-
+/**
+ * @param args string.
+ **/
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
