@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -127,8 +127,8 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index>=0  && index<size){
-         for(int i=index;i<size-1;i++){
+        if (index>=0  && index<size) {
+         for (int i=index;i<size-1;i++) {
             arr[i] = arr[i+1];
          }
      
@@ -154,7 +154,7 @@ public class List {
      */
     public void get(int index) {
         // Replace the code below to write the code for get
-        if( index >=0 && index<size) {
+        if (index >= 0 && index < size) {
             System.out.println(arr[index]);
         }
         
@@ -183,7 +183,7 @@ public class List {
     public String toString() {
         // Replace the code below
         String res = "[";
-        for(int i = 0; i<size-1;i++){
+        for (int i = 0; i<size-1;i++) {
             res = res + arr[i] + ",";
         }
         res += arr[size-1] + "]";
@@ -198,8 +198,8 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for(int i = 0; i<size;i++){
-            if(arr[i]==item) return true;
+        for (int i = 0; i<size;i++) {
+            if (arr[i] == item) return true;
         }
         return false;
     }
@@ -211,8 +211,8 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for(int i = 0; i<size;i++){
-            if(arr[i]==item) {
+        for (int i = 0; i<size;i++) {
+            if (arr[i]==item) {
                 return i;
             }
 
@@ -220,7 +220,7 @@ public class List {
         return -1;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -263,5 +263,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
