@@ -1,6 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+class starts here
+ **/
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -24,7 +26,10 @@ public class List {
      * will protect the array such corruption.
      * This is a hard concept to understand. Discuss with your mentor.
      *
-    */
+    **/
+    /**.
+      private variable
+      **/
     private int[] arr;
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -47,16 +52,18 @@ public class List {
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
      *
-     */
-
+     **/
+    /**.
+    private variable
+    **/
     private int size;
     // again, don't initialize it here
     // variable initialization should be done in the constructor
 
-    /*
+    /**
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
-     */
+     **/
     public List() {
         // what are the two variables to be initialized here?
         // think about the private variables described above.
