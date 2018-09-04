@@ -46,7 +46,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
 
     private int size;
@@ -58,7 +58,6 @@ public class List {
      * class variables with some default values.
      */
     public List() {
-
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
@@ -73,7 +72,6 @@ public class List {
         arr = new int[ten];
         size = 0;
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -82,7 +80,7 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
     public void add(int item) {
@@ -90,19 +88,16 @@ public class List {
         arr[size] = item;
         size = size + 1;
     }
-
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
         // replace the code below to implement the size method
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -130,16 +125,12 @@ public class List {
          for (int i = index; i < size - 1; i++) {
             arr[i] = arr[i + 1];
          }
-     
          arr[size] = 0;
          size = size - 1;
-     }
-         else{
+     } else {
             System.out.println("Invalid Position Exception");
-         }
-        
+        }
     }
-
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -156,7 +147,6 @@ public class List {
         if (index >= 0 && index < size) {
             System.out.println(arr[index]);
         }
-        
     }
 
     /*
@@ -168,7 +158,7 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -182,10 +172,10 @@ public class List {
     public String toString() {
         // Replace the code below
         String res = "[";
-        for (int i = 0; i < size-1; i++) {
+        for (int i = 0; i < size - 1; i++) {
             res = res + arr[i] + ",";
         }
-        res += arr[size-1] + "]";
+        res += arr[size - 1] + "]";
         return res;
     } 
     /*
@@ -197,7 +187,9 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
-            if (arr[i] == item) return true;
+            if (arr[i] == item){
+            return true;
+         }
         }
         return false;
     }
@@ -218,7 +210,7 @@ public class List {
         return -1;
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
