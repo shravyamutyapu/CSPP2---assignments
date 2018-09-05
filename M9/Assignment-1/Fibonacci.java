@@ -28,8 +28,9 @@ public class Fibonacci
      */
     public static List fib(int n) {
         // todo - complete this method
-         List obj = new List();
         int a =0 ,b =1,fib;
+        List obj = new List();
+        obj.List(n);
         if(n==1)
         	obj.add(a);
         else{
