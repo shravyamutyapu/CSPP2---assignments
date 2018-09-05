@@ -25,18 +25,19 @@ public class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
-    public static List fib(int n) {
+    public static List fib(final int n) {
         // todo - complete this method
         int a = 0 , b = 1 , fib;
+        final int three = 3;
         List obj = new List();
         obj.List(n);
         if (n == 1) {
-        	obj.add(a);
+            obj.add(a);
         }
         else {
-        	obj.add(a);
+            obj.add(a);
             obj.add(b);
-            for (int i = 3; i <= n; i++) {
+            for (int i = three ; i <= n ; i++) {
             fib = a + b ;
             a = b;
             b = fib ;
@@ -46,7 +47,7 @@ public class Fibonacci {
         return obj;
     }
 
-	public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
