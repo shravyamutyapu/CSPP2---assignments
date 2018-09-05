@@ -33,8 +33,7 @@ public class Fibonacci {
         obj.List(n);
         if (n == 1) {
             obj.add(a);
-        }
-        else {
+        } else {
             obj.add(a);
             obj.add(b);
             for (int i = three; i <= n; i++) {
