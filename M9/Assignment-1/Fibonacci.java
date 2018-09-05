@@ -27,7 +27,7 @@ public class Fibonacci {
      */
     public static List fib(final int n) {
         // todo - complete this method
-        int a = 0 , b = 1 , fib;
+        int a = 0, b = 1, fib;
         final int three = 3;
         List obj = new List();
         obj.List(n);
@@ -37,8 +37,8 @@ public class Fibonacci {
         else {
             obj.add(a);
             obj.add(b);
-            for (int i = three ; i <= n ; i++) {
-            fib = a + b ;
+            for (int i = three; i <= n; i++) {
+            fib = a + b;
             a = b;
             b = fib ;
             obj.add(fib);
