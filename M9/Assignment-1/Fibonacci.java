@@ -33,7 +33,7 @@ final class Fibonacci {
     private Fibonacci() {
 
     }
-    /** 
+    /**
      * @param n int.
      * @return list.
      **/
