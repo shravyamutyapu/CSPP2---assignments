@@ -57,7 +57,7 @@ public class Solution {
                             listString.add(tokens[1]);
                         break;
                         case "addAll":
-                        if (tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         listString.addAll(t1);
                         }
@@ -104,7 +104,7 @@ public class Solution {
                             listInteger.add(Integer.parseInt(tokens[1]));
                         break;
                         case "addAll":
-                        if (tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
                         for (int i = 0;i < temp.length; i++ ) {
@@ -155,10 +155,10 @@ public class Solution {
                             listFloat.add(Float.parseFloat(tokens[1]));
                         break;
                         case "addAll":
-                        if (tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Float temp[] = new Float[t1.length];
-                        for (int i = 0; i < t1.length ;i++ ) {
+                        for (int i = 0; i < t1.length ;i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
                         listFloat.addAll(temp);
@@ -206,7 +206,7 @@ public class Solution {
                             listCharacter.add(tokens[1].charAt(0));
                         break;
                         case "addAll":
-                        if (tokens.length ==  2){
+                        if (tokens.length ==  2) {
                         String[] t1 = tokens[1].split(",");
                         Character[] temp = new Character[t1.length];
                         for (int i = 0; i < t1.length ;i++) {
@@ -257,10 +257,10 @@ public class Solution {
                             listDouble.add(Double.parseDouble(tokens[1]));
                         break;
                         case "addAll":
-                        if (tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for (int i = 0; i < t1.length ;i++ ) {
+                        for (int i = 0; i < t1.length ;i++) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         listDouble.addAll(temp);
@@ -295,7 +295,8 @@ public class Solution {
                 }
             break;
 
-            case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+            case "O"://This case will be executed for Student 
+            //Ffortype list i.e to store List of Student Objects
                 List<Student> listStudent = new List();
                 while (stdin.hasNext()) {
                     // read the line
@@ -308,10 +309,10 @@ public class Solution {
                             listStudent.add(new Student(tokens[1]));
                         break;
                         case "addAll":
-                        if (tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Student[] temp = new Student[t1.length];
-                        for (int i = 0; i < t1.length ;i++ ) {
+                        for (int i = 0; i < t1.length ;i++) {
                             temp[i] = new Student(t1[i]);
                         }
                         listStudent.addAll(temp);
