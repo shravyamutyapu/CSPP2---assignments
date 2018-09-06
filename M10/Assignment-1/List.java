@@ -308,7 +308,7 @@ public class List {
     }
 
 
-	public static void main(String[] args) {
+	 public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -323,14 +323,14 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if((tokens.length)==2){
+                if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
-                if(t.length==1){
+                if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else{
-                    if(t.length>1)
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                } else {
+                    if (t.length > 1) {
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                    }
                     }
                 }
                 break;
@@ -338,11 +338,12 @@ public class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if(tokens.length==2){
+                if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[]=new int[t1.length];
-                for(int i=0;i<temp.length;i++)
-                    temp[i]=Integer.parseInt(t1[i]);
+                int[] temp = new int[t1.length];
+                for (int i = 0; i < temp.length; i++) {
+                    temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
                 break;
@@ -374,5 +375,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
