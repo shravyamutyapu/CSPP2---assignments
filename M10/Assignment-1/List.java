@@ -112,6 +112,7 @@ public class List {
         list[size++] = item;
     }
 
+
     /*
      *
      * Resize the list
@@ -300,6 +301,9 @@ public class List {
          */
     public void add(final int index, final int item) {
          // write the logic
+        if (size < 0) {
+            System.out.println("Negative Index Exception");
+        }
         for (int i = size; i > index; i--) {
             list[i] = list[i - 1];
         }
