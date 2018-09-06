@@ -12,18 +12,21 @@ class Student {
     * @param name [description]
     * @return [description]
     */
-    public Student(final String name) { //A constructor used to initialize the instance variables
+    public Student(final String name) {
+    //A constructor used to initialize the instance variables
         this.name = name;
     }
     /**
      get name.
      **/
-    public String getName() { //Getter method which returns the value of instance variable
+    public String getName() {
+    //Getter method which returns the value of instance variable
         return this.name;
     }
 
     @Override
-    public boolean equals(Object other) { //This method is to check if  two students names are equal or not
+    public boolean equals(Object other) {
+    //This method is to check if  two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
         }
@@ -51,7 +54,7 @@ public class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listString.add(tokens[1]);
