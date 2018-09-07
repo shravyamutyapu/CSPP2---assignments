@@ -51,8 +51,8 @@ class Student {
 class.
  **/
 final class Solution {
-    /**
-     default constructor
+    /**.
+     default constructor.
      **/
     private Solution() { }
     /**
