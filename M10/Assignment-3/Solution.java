@@ -11,10 +11,16 @@ class Student {
    /**
     * @param name [description]
     */
-    public Student(final String name) {
+    Student(final String name1) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = name1;
     }
+
+    @Override
+    public  int hashCode(){
+        return 0;
+    }
+
     /**
      get name.
      * @return name.
@@ -42,8 +48,9 @@ class Student {
     }
 }
 /**
- * @param args [description]
- **/
+ * @brief [brief description]
+ * @details [long description]
+ */
 public class Solution {
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
