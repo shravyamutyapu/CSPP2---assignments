@@ -50,7 +50,7 @@ class Student {
 /**
 class.
  **/
-public class Solution {
+class Solution {
     /**
      * @param args [description]
      */
