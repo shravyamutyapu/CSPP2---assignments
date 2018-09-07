@@ -43,14 +43,14 @@ class Student {
 }
 /**
  * @param args [description]
- */
+ **/
 public class Solution {
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
-        switch(objectType) {
+        switch (objectType) {
             case "S"://This case will be executed for String type list
                 List<String> listString = new List();
                 while (stdin.hasNext()) {
@@ -148,7 +148,8 @@ public class Solution {
                         break;
                         case "contains":
                         System.out.println(
-                            listInteger.contains(Integer.parseInt((tokens[1]))));
+                            listInteger.contains(
+                                Integer.parseInt((tokens[1]))));
                         break;
                         default:
                          break;
@@ -170,7 +171,7 @@ public class Solution {
                         case "addAll":
                         if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
-                        Float temp[] = new Float[t1.length];
+                        Float[] temp = new Float[t1.length];
                         for (int i = 0; i < t1.length; i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
