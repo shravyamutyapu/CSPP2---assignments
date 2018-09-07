@@ -240,6 +240,9 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * @return str [description].
+     */
     public String toString() {
         if (size == 0) {
             return "[]";
