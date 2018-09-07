@@ -30,7 +30,6 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    
     private int[] list;
 
     /*
@@ -56,10 +55,11 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-/*
+/**
+
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
-     */
+     **/
 
     public List() {
 
@@ -69,7 +69,8 @@ public class List {
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
         // private a = 10;
-        list = new int[10];
+        final int a = 10;
+        list = new int[a];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -89,6 +90,9 @@ public class List {
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
+     */
+    /**
+     * @param int [description]
      */
     public List(final int capacity) {
         size = 0;
@@ -260,12 +264,11 @@ public class List {
         return indexOf(item) == -1;
     }
 
-    /*
+    /**
      * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
-     */
-    
+     **/
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -281,9 +284,9 @@ public class List {
      **/
     public void addAll(final int[] items) {
         // write the logic
-        int length =items.length + size;
+        int length = items.length + size;
         int temp = 0;
-        for (int i = size; i < length;i++) {
+        for (int i = size; i < length; i++) {
             list[i] = items[temp];
             temp++;
         }
