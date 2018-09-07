@@ -283,7 +283,7 @@ public class List {
         // write the logic
         int length =items.length + size;
         int temp = 0;
-        for (int i = size; i < length++;i++) {
+        for (int i = size; i < length;i++) {
             list[i] = items[temp];
             temp++;
         }
