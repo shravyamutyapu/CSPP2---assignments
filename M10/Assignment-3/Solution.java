@@ -50,7 +50,11 @@ class Student {
 /**
 class.
  **/
-class Solution {
+final class Solution {
+    /**
+     default constructor
+     **/
+    private Solution() { }
     /**
      * @param args [description]
      */
