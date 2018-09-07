@@ -85,8 +85,8 @@ public class List {
     // An empty list has how many items?
     // That is the initial value to use for size.
 
-    final int max = 10;
-    list = new int[max];
+    final int n = 10;
+    list = new int[n];
     size = 0;
   }
   /**
@@ -161,18 +161,20 @@ public class List {
    * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
    *
    */
-
+  /**
+   * removes an element from the list.
+   *
+   * @param      index  The index
+   */
   public void remove(final int index) {
     // write the logic for remove here. Think about what to do to the size
     // variable.
-    if (index >= 0 && index < size) {
+
       for (int i = index; i < size - 1; i++) {
         list[i] = list[i + 1];
       }
       size--;
-    } else {
-      System.out.println("Invalid Position Exception");
-    }
+
   }
 
   /*
@@ -183,6 +185,13 @@ public class List {
    * the number of items in the list then that would mean the item doesn't
    * exist. How do we check if the position is greater than the number of
    * items in the list? Would size variable be useful?
+   */
+  /**
+   * getter method to access an element at an index.
+   *
+   * @param      index  The index
+   *
+   * @return     int value in the list, -1 if its not there.
    */
   public int get(final int index) {
     // Replace the code below to write the code for get
@@ -205,6 +214,11 @@ public class List {
    * the string [1,2,3] Caution: The array may be having other elements
    * Example: [1,2,3,0,0,0,0,0,0,0] toString should only return the items in
    * the list and not all the elements of the array.
+   */
+  /**
+   * Returns a string representation of the object.
+   *
+   * @return     String representation of the object.
    */
   public String toString() {
     // Replace the code below
@@ -482,6 +496,3 @@ public class List {
     }
   }
 }
-
-
-
