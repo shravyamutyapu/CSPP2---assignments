@@ -48,7 +48,7 @@ class Student {
     }
 }
 /**
-class.  
+class.
  **/
 public class Solution {
     public static void main(final String[] args) {
