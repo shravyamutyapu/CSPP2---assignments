@@ -27,7 +27,7 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    /** declare a private int[]
+    /** declare a private int[].
     // don't create the array yet using new
     that's the job of the List constructor**/
     private int[] list;
@@ -50,7 +50,7 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      */
 
-    /** declare a private int size
+    /** declare a private int size.
     // again, don't initialize it here
      variable initialization should be done in the constructor
      **/
@@ -92,7 +92,7 @@ public class List {
      * constructor.
      */
     /**
-     * @param int [description]
+     * @param capacity [description].
      */
     public List(final int capacity) {
         size = 0;
@@ -208,7 +208,10 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-   
+    /**
+     * @param index [description].
+     * @return int [description].
+     */
     public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
@@ -270,8 +273,7 @@ public class List {
     /**
      * @brief [brief description]
      * @details [long description]
-     * 
-     * @param int [description]
+     * @param item [description]
      * @return int [description]
      */
     public int indexOf(final int item) {
