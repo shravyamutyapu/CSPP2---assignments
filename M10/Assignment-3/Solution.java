@@ -8,9 +8,8 @@ class Student {
      private variable.
      **/
     private String name;
-   /** 
+   /**
     * @param name [description]
-    * @return [description]
     */
     public Student(final String name) {
     //A constructor used to initialize the instance variables
@@ -18,6 +17,7 @@ class Student {
     }
     /**
      get name.
+     * @return name.
      **/
     public String getName() {
     //Getter method which returns the value of instance variable
@@ -286,13 +286,16 @@ public class Solution {
                         listDouble.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
+                        System.out.println
+                        (listDouble.indexOf(Double.parseDouble(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
+                        System.out.println
+                        (listDouble.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+                        System.out.println
+                        (listDouble.contains(Double.parseDouble(tokens[1])));
                         break;
                     }
                 }
@@ -315,7 +318,7 @@ public class Solution {
                         if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Student[] temp = new Student[t1.length];
-                        for (int i = 0; i < t1.length ;i++) {
+                        for (int i = 0 ; i < t1.length ; i++) {
                             temp[i] = new Student(t1[i]);
                         }
                         listStudent.addAll(temp);
@@ -338,13 +341,16 @@ public class Solution {
                         listStudent.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listStudent.indexOf(new Student(tokens[1])));
+                        System.out.println
+                        (listStudent.indexOf(new Student(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
+                        System.out.println
+                        (listStudent.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listStudent.contains(new Student(tokens[1])));
+                        System.out.println
+                        (listStudent.contains(new Student(tokens[1])));
                         break;
                     }
                 }
