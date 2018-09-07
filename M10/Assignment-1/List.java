@@ -31,7 +31,6 @@ public class List {
     // don't create the array yet using new
     // that's the job of the List constructor
     private int[] list;
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -237,7 +236,6 @@ public class List {
      * not all the elements of the array.
      *
      */
-    
     public String toString() {
         if (size == 0) {
             return "[]";
@@ -263,12 +261,18 @@ public class List {
     public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
-
     /**
      * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      **/
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param int [description]
+     * @return int [description]
+     */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
