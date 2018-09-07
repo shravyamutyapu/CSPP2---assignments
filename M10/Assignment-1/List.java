@@ -27,9 +27,9 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    // declare a private int[]
+    /** declare a private int[]
     // don't create the array yet using new
-    // that's the job of the List constructor
+    that's the job of the List constructor**/
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -50,9 +50,10 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      */
 
-    // declare a private int size
+    /** declare a private int size
     // again, don't initialize it here
-    // variable initialization should be done in the constructor
+     variable initialization should be done in the constructor
+     **/
     private int size;
 /**
 
