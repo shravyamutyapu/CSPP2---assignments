@@ -326,7 +326,7 @@ public class Solution {
                     }
                 }
 
-            case "O"://This case will be executed for Student 
+            case "O"://This case will be executed for Student
             //Ffortype list i.e to store List of Student Objects
                 List<Student> listStudent = new List();
                 while (stdin.hasNext()) {
@@ -334,7 +334,7 @@ public class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation 
+                    // based on the list operation
                     // invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
