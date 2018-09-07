@@ -9,7 +9,7 @@ class Student {
      **/
     private String name;
    /**
-    * @param name [description]
+    * @param name1 [description]
     */
     Student(final String name1) {
     //A constructor used to initialize the instance variables
@@ -17,7 +17,7 @@ class Student {
     }
 
     @Override
-    public  int hashCode(){
+    public  int hashCode() {
         return 0;
     }
 
@@ -48,9 +48,8 @@ class Student {
     }
 }
 /**
- * @brief [brief description]
- * @details [long description]
- */
+class.  
+ **/
 public class Solution {
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
