@@ -25,7 +25,7 @@ class Student {
     }
 
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
     //This method is to check if  two students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -34,12 +34,16 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+    /**
+     * @return name [description]
+     */
     public String toString() {
         return this.name;
     }
 }
-
+/**
+ * @param args [description]
+ */
 public class Solution {
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
@@ -215,7 +219,8 @@ public class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation
+                    //invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listCharacter.add(tokens[1].charAt(0));
@@ -281,7 +286,7 @@ public class Solution {
                         if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for (int i = 0 ; i < t1.length ; i++) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         listDouble.addAll(temp);
@@ -297,7 +302,7 @@ public class Solution {
                         // print the list (implement
                         //toString in StringList class
                         //for this to work)
-                        // expected format 
+                        // expected format
                         //is [item-1,item-2,...,item-n]
                         // review the output testcase file
                         System.out.println(listDouble);
