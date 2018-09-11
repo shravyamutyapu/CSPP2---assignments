@@ -15,9 +15,8 @@ class InvalidPositionException extends Exception {
     }
 }
 /**
-*class list.
-*
-*/
+ * class declaration
+ */
 class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -47,7 +46,7 @@ class List {
      */
     private int[] list;
     /**
-     * size of list.
+     * size of the list.
      */
     private int size;
     // declare a private int[]
@@ -258,7 +257,7 @@ class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        return indexOf(item) == -1;
+        return indexOf(item) != -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
