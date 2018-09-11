@@ -106,7 +106,7 @@ class SortedSet extends Set {
     /**
      * Adds all elements of the array.
      *
-     * @param array1
+     * @param array1 array
      */
     public void addAll(final int[] array1) {
         for (int i : array1) {
