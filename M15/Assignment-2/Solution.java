@@ -45,8 +45,8 @@ class SortedSet extends Set {
      * @return    a subset array
      */
     public int[] subSet(final int fromElement, final int toElement) {
-        final int ten = 10;
-        int[] arr = new int[ten];
+        final int TEN = 10;
+        int[] arr = new int[TEN];
         try {
             if (fromElement <= toElement) {
                int count = 0;
@@ -61,17 +61,15 @@ class SortedSet extends Set {
                 "Invalid Arguments to Subset Exception");
             }
         } catch (Exception e) {
-            System.out.println("Invalid Arguments to Subset Exception");
+            System.out.println(
+                "Invalid Arguments to Subset Exception");
             return null;
         }
     }
     /**
-     * headset array consists of elements less than the given element.
-     *
      * @param      toElement  To element
-     *
      * @return     an array
-     * @throws      SetEmptyException raises if there are no elements
+     * @throws      SetEmptyException
      */
     public int[] headSet(final int toElement) throws SetEmptyException {
         if (toElement <= get(0)) {
@@ -108,10 +106,10 @@ class SortedSet extends Set {
     /**
      * Adds all elements of the array.
      *
-     * @param      ar    The archive
+     * @param ar
      */
-    public void addAll(final int[] ar) {
-        for (int i : ar) {
+    public void addAll(final int[] array1) {
+        for (int i : array1) {
             add(i);
         }
     }
@@ -119,7 +117,7 @@ class SortedSet extends Set {
     /**
      * adds the given element to the set.
      *
-     * @param      ele   The element
+     * @param ele The element
      */
     public void add(final int ele) {
         int index = 0;
@@ -167,15 +165,15 @@ class SortedSet extends Set {
      * @return     returns elements that are in both sets
      */
     public Set retainAll(final int[] intArray) {
-        Set na = new Set();
+        Set s = new Set();
         for (int i = 0; i < size(); i++) {
             for (int j = 0; j < intArray.length; j++) {
                 if (intArray[j] == get(i)) {
-                    na.add(get(i));
+                    s.add(get(i));
                 }
             }
         }
-        return na;
+        return s;
     }
     /**
      * cartesian product.
