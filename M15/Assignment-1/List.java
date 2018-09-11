@@ -85,7 +85,7 @@ class List {
     /**
      * Constructs the object.
      */
-    public List() {
+    List() {
 
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
@@ -114,7 +114,7 @@ class List {
      *
      * @param      capacity  The capacity
      */
-    public List(final int capacity) {
+    List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
