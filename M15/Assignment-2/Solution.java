@@ -45,8 +45,8 @@ class SortedSet extends Set {
      * @return    a subset array
      */
     public int[] subSet(final int fromElement, final int toElement) {
-        final int TEN = 10;
-        int[] arr = new int[TEN];
+        final int num = 10;
+        int[] arr = new int[num];
         try {
             if (fromElement <= toElement) {
                int count = 0;
@@ -69,7 +69,7 @@ class SortedSet extends Set {
     /**
      * @param      toElement  To element
      * @return     an array
-     * @throws      SetEmptyException
+     * @throws      SetEmptyException set empty
      */
     public int[] headSet(final int toElement) throws SetEmptyException {
         if (toElement <= get(0)) {
@@ -106,7 +106,7 @@ class SortedSet extends Set {
     /**
      * Adds all elements of the array.
      *
-     * @param ar
+     * @param array1
      */
     public void addAll(final int[] array1) {
         for (int i : array1) {
