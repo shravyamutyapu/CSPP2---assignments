@@ -359,10 +359,10 @@ class List {
                 throw new IndexOutOfBoundsException(
                     "Index Out of Bounds Exception");
             } else {
-                List ls = new List(end - start);
+                List lst = new List(end - start);
                 for (int i = start; i < end; i++) {
-                    ls.add(list[i]);
-                } return ls;
+                    lst.add(list[i]);
+                } return lst;
             }
         } catch (Exception e) {
                 System.out.println("Index Out of Bounds Exception");
@@ -376,17 +376,17 @@ class List {
     /**
      * compares the lists.
      *
-     * @param      olist  The list
+     * @param      eqlist  The list
      *
      * @return    true or false
      */
-    public boolean equals(final List olist) {
+    public boolean equals(final List eqlist) {
     // Replace the code below
-    if (size != olist.size) {
+    if (size != eqlist.size) {
         return false;
     }
     for (int i = 0; i < size; i++) {
-            if (this.list[i] != olist.list[i]) {
+            if (this.list[i] != eqlist.list[i]) {
                 return false;
             }
         }
