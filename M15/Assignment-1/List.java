@@ -15,7 +15,7 @@ class InvalidPositionException extends Exception {
     }
 }
 /**
- * class declaration
+ * class declaration.
  */
 class List {
     //Implement all the methods mentioned to build a ListADT
