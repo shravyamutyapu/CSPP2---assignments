@@ -8,5 +8,8 @@ public class Show {
        this.seatNums = seats;
        this.bookedSeats = new Patron[seats.length];
 	}
+	public String toString() {
+		return movieName+","+dateTime;
+	}
 
 }

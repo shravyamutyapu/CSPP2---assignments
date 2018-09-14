@@ -67,10 +67,11 @@ public class BookYourShow {
 					}
 				}
 			}
+		}
 
-			if (flag = true) {
+			if (flag) {
 				System.out.println(moviename + " " + dattime + " " + mobNum);
 			}
-		}
+
 	}
 }
