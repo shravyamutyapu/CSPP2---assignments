@@ -78,7 +78,7 @@ public class BookYourShow {
 		}
 
 			if (flag) {
-				System.out.println(moviename + " " + dattime + " " + mobNum);
+				System.out.println(mobNum + " " + dattime + " " + moviename);
 			}
 
 	}
