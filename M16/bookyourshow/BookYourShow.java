@@ -79,6 +79,8 @@ public class BookYourShow {
 
 			if (flag) {
 				System.out.println(mobNum + " " + moviename + " " + dattime);
+			} else {
+				System.out.println("Invalid");
 			}
 
 	}
