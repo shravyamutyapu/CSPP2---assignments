@@ -23,6 +23,14 @@ public class BookYourShow {
 		return null;
 	}
 	public void bookAShow(String moviename, String dattime, Patron p, String[] bookingSeats) {
+		if (size == 0) {
+			System.out.println("No show");
+			return;
+		}
+		if (getAShow(moviename, dattime) == null) {
+			System.out.println("No show");
+			return;
+		}
 		for (Show s : allShows) {
 			if (s != null) {
 				if (s.movieName.equals(moviename) && s.dateTime.equals(dattime)) {
