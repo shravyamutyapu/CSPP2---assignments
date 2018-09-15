@@ -81,9 +81,10 @@ public final class Solution {
         int maxmarks = Integer.parseInt(lines[3]);
         int penalty = Integer.parseInt(lines[4]);
         for(int q = 0; q<questionCount;q++){
-        for(int i = 1;i<choices.length;i++){
+        for(int i = 1;i<=choices.length;i++){
              System.out.print("choice "+i+"   ");
        }
+       System.out.println("/n");
    }
 
     }
