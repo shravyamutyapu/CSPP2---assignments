@@ -8,10 +8,6 @@ public final class Solution {
     * Constructs the object.
     */
     static class Quiz {
-        int size;
-        Quiz() {
-            int size = 0;
-        }
 
     }
     private Solution() {
@@ -33,6 +29,7 @@ public final class Solution {
             String line = s.nextLine();
             // split the line using space
             String[] tokens = line.split(" ");
+
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
             case "LOAD_QUESTIONS":
@@ -72,20 +69,24 @@ public final class Solution {
         Quiz quiz1 = new Quiz();
         Scanner sc = new Scanner(System.in);
         //Object obj = new Object[10];
-        String[] line1 = sc.nextLine().split(" ");
-        String n = line1[1];
-        System.out.println(n + " are added to the quiz");
+        String[] lines = sc.nextLine().split(" ");
+        int n = Integer.parseInt(lines[1]);
+        //System.out.println(n);
         // for (int i = 1; i <= qncount; i++) {
         //     String[] lines = sc.nextLine().split(":");
         //     // lines = lines.;
         //     String[] choices = lines[1].split(",");
-        //     String qn = lines[0];
-        //     int correct = Integer.parseInt(lines[2]);
-        //     int maxmarks = Integer.parseInt(lines[3]);
-        //     int penalty = Integer.parseInt(lines[4]);
 
-
+        for (int i = 0; i < n; i++) {
+            sc.nextLine();
         }
+        String qn = lines[0];
+        int correct = Integer.parseInt(lines[2]);
+        int maxmarks = Integer.parseInt(lines[3]);
+        int penalty = Integer.parseInt(lines[4]);
+        System.out.println(n + " are added to the quiz");
+    }
+
 
     /**
      * Starts a quiz.
@@ -98,18 +99,13 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-
-        // for (int q = 0; q < 8; q++) {
-        //     for (int i = 1; i <= 9; i++) {
-        //         System.out.print("choice " + i + "   ")
-        //     }
-        //     System.out.println("");
-        // }
+        Scanner sc = new Scanner(System.in);
+        String[] line22 = sc.nextLine().split(" ");
+        int answerCount1 = Integer.parseInt(line22[1]);
+        for (int i = 0; i < answerCount1; i++) {
 
 
-
-
-
+        }
     }
 
     /**
