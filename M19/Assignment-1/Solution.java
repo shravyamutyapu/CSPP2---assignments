@@ -72,8 +72,9 @@ public final class Solution {
         Quiz quiz1 = new Quiz();
         Scanner sc = new Scanner(System.in);
         //Object obj = new Object[10];
-        int qncount = Integer.parseInt(sc.nextLine());
-        System.out.println(qncount + " are added to the quiz");
+        String[] line1 = sc.nextLine().split(" ");
+        String n = line1[1];
+        System.out.println(n + " are added to the quiz");
         // for (int i = 1; i <= qncount; i++) {
         //     String[] lines = sc.nextLine().split(":");
         //     // lines = lines.;
