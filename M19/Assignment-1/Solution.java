@@ -13,8 +13,8 @@ public final class Solution {
             int size = 0;
         }
 
-
-    private void Solution() {
+    }
+    private Solution() {
         // leave this blank
     }
     /**
@@ -73,7 +73,7 @@ public final class Solution {
         Scanner sc = new Scanner(System.in);
         //Object obj = new Object[10];
         int qncount = Integer.parseInt(sc.nextLine());
-        System.out.println(qncount +" are added to the quiz");
+        System.out.println(qncount + " are added to the quiz");
         // for (int i = 1; i <= qncount; i++) {
         //     String[] lines = sc.nextLine().split(":");
         //     // lines = lines.;
@@ -85,11 +85,6 @@ public final class Solution {
 
 
         }
-
-
-
-
-    }
 
     /**
      * Starts a quiz.
@@ -103,9 +98,9 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
 
-        // for (int q = 0; q < s.questionCount; q++) {
-        //     for (int i = 1; i <= choices.length; i++) {
-        //         System.out.print("choice " + i + "   ");
+        // for (int q = 0; q < 8; q++) {
+        //     for (int i = 1; i <= 9; i++) {
+        //         System.out.print("choice " + i + "   ")
         //     }
         //     System.out.println("");
         // }
@@ -128,4 +123,5 @@ public final class Solution {
         //totalScore += score[i];
     }
 }
+
 //}
