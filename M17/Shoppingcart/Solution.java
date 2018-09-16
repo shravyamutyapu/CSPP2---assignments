@@ -1,8 +1,8 @@
-import java.util.*;
+import java.util.Scanner;
+
 final class Solution {
 
-    private Solution() {
-    }
+    private Solution() { }
     public static void main(final String[] args) {
         ShoppingCart shop = new ShoppingCart();
         Scanner sc = new Scanner(System.in);
@@ -11,7 +11,7 @@ final class Solution {
             String[] input = sc.nextLine().split(" ");
             switch (input[0]) {
                 case "Item":
-                String[] tokens = input[1].split(".");
+                String[] tokens = input[1].split(",");
                 shop.addToCatalog(new Item(tokens[0], tokens[1], tokens[2]));
                 break;
                 case "catalog":
@@ -25,21 +25,23 @@ final class Solution {
                 shop.showCart();
                 break;
                 case "totalAmount":
-                System.out.println("totalamount: " + shop.getTotalAmount());
+                System.out.println("totalAmount: " + shop.getTotalAmount());
                 break;
                 case "payableAmount":
                 System.out.
-                println("payable Amount: " + shop.getPayableAmount());
+                println("Payable amount: " + shop.getPayableAmount());
                 break;
                 case "remove":
                 String[] tokens12 = input[1].split(",");
                 shop.removeFromCart(new Item(tokens12[0], tokens12[1]));
                 break;
-                case "coupen":
+                case "coupon":
                 shop.applyCoupon(input[1]);
                 break;
                 case "print":
                 shop.printInvoice();
+                break;
+                default:
                 break;
             }
         }
