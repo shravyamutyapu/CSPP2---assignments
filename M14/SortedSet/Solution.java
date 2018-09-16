@@ -1,11 +1,23 @@
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
+/**
+ *class declaration.
+ */
 class SortedSet extends Set {
+    /**
+     * constructor.
+     */
 
     SortedSet() {
         super();
     }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     *
+     * @param item [description]
+     */
     @Override
     public void add(final int item) {
         if (this.size() == this.getarraylength() - 1) {
