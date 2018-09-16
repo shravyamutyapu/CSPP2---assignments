@@ -3,9 +3,9 @@ import java.util.Scanner;
 **class declaration.
  */
 final class Solution {
-	/**
-	 *default constructor.
-	 */
+    /**
+     *default constructor.
+     */
     private Solution() { }
     /**
      * main method.
