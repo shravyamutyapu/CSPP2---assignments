@@ -29,6 +29,12 @@ class SortedSet extends Set {
         }
 
     }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     *
+     * @param item [description]
+     */
     public void insert(final int item) {
         int newIndex = 0;
         for (int i = this.size() - 1; i >= 0; i--) {
@@ -52,13 +58,27 @@ class SortedSet extends Set {
         }
         this.arraysetter(item, newIndex);
         this.sizeinc();
-
     }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     *
+     * @param eachint [description]
+     */
     public void addAll(final int[] eachint) {
         for (int i : eachint) {
             this.add(i);
         }
     }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     *
+     * @param start [description]
+     * @param end [description]
+     *
+     * @return int [description]
+     */
     public int[] subSet(final int start, final int end) {
         if (start > end) {
             System.out.println("Invalid Arguments to Subset Exception");
@@ -86,6 +106,13 @@ class SortedSet extends Set {
 
         return result;
     }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     *
+     * @param element [description]
+     * @return integer array[description]
+     */
     public int[] headSet(final int element) {
         if (element <= get(0)) {
             return new int[] {};
@@ -101,6 +128,11 @@ class SortedSet extends Set {
         return Arrays.copyOf(getArray(), i);
 
     }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * @return [last element]
+     */
     public int last() {
         if (this.size() == 0) {
             System.out.println("Set Empty Exception");
@@ -112,6 +144,9 @@ class SortedSet extends Set {
     }
 
 }
+/**
+ * Solution class.
+ */
 
 public final class Solution {
     private Solution() {
