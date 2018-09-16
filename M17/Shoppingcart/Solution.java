@@ -1,8 +1,16 @@
 import java.util.Scanner;
-
+/**
+**class declaration.
+ */
 final class Solution {
-
+	/**
+	 *default constructor.
+	 */
     private Solution() { }
+    /**
+     * main method.
+     * @param args [description]
+     */
     public static void main(final String[] args) {
         ShoppingCart shop = new ShoppingCart();
         Scanner sc = new Scanner(System.in);
