@@ -1,128 +1,177 @@
-import java.util.*;
-import java.lang.*;
-class Sortedset extends Set{
-	Sortedset(){
-	}
-	Sortedset(int[] param){
-		for(int i : param){
-			add(i);
-		}
-	}
-	public void add(int item,int v){
-		if(!contains(item)){
-			if( size()==0 ){
-				add(item,0);
-				return;
-			}
-			int index;
-			for(index = 0; index <size() ; index++){
-				if(get(index)> item){
-					break;
-				}
-			}
-			add(item,index);
-		}
-		// for(int i = size() ; i> index ; i--){
-		// 		arr[i] = arr[i-1];
-		// }
-		// arr[index] = item;
-		// setSize(size()+1);
-	}
+import java.util.Arrays;
+import java.util.Scanner;
+import java.io.BufferedInputStream;
+class SortedSet extends Set {
 
-	public int[] subset(int from,int to){
-		if(Math.abs(from) > Math.abs(to)){
-			System.out.println("Invalid arguments to subset");
-			return null;
-		}
-		int start = -1,stop = -1;
-		start = indexOf(from);
-		stop = indexOf(to);
-		if(stop == -1 || start == -1){
-			System.out.println("Invalid arguments to subset");
-			return null;
-		}
-		int[] newArr = new int[stop-start];
-		for(int i = start,j=0 ;i<stop;i++, j++){
-			newArr[j] = get(i);
-		}
-		//System.out.println(Arrays.toString(newArr));
-		return  newArr;
-	}
-	int[] headSet(int to){
-		return subset(get(0),to);
+    SortedSet() {
+        super();
+    }
+    @Override
+    public void add(final int item) {
+        if (this.size() == this.getarraylength() - 1) {
+            resize();
+        }
 
-	}
-	 int last(){
-	 	try{
-	 	if(size()==0){
-	 		throw new ArithmeticException("Set​ ​ Empty​ ​ Exception");
-	 	}
-	 }catch(Exception e){
-	 	System.out.println("Set​ ​ Empty​ ​ Exception");
-	 }
-	 	return get(size()-1);
-	 }
+        if (!contains(item)) {
+            this.insert(item);
+        }
 
-	 void addAll(int[] a){
-	 	for(int i : a){
-	 		add(i);
-	 	}
-	 }
+    }
+    public void insert(final int item) {
+        int newIndex = 0;
+        for (int i = this.size() - 1; i >= 0; i--) {
+            if (this.get(i) < item) {
+                newIndex = i + 1;
+                break;
+            }
+        }
 
-	 // public String toString() {
-  //       if (size() == 0) {
-  //           return "{}";
-  //       }
-  //       StringBuilder sb = new StringBuilder("{");
-  //       for (int i = 0; i < size() - 1; i++) {
-  //           sb.append(arr[i] + ", ");
-  //       }
-  //       sb.append(arr[size() - 1] + "}");
-  //       return sb.toString();
-  //   }
+        int temp = 0;
+        if (size() == 0) {
+            temp = 0;
+        } else {
+            temp = this.get(newIndex);
+        }
+        for (int i = newIndex; i < size() + 1; i++) {
+            int temp1 = this.get(i + 1);
+            this.arraysetter(temp, i + 1);
+            temp = temp1;
 
+        }
+        this.arraysetter(item, newIndex);
+        this.sizeinc();
+
+    }
+    public void addAll(final int[] eachint) {
+        for (int i : eachint) {
+            this.add(i);
+        }
+    }
+    public int[] subSet(final int start, final int end) {
+        if (start > end) {
+            System.out.println("Invalid Arguments to Subset Exception");
+            return null;
+        }
+
+        int i = 0;
+        int j = 0;
+        for (; i < size(); i++) {
+            if (get(i) >= start) {
+                break;
+            }
+        }
+
+        for (j = i; j < size(); j++) {
+            if (get(j) >= end) {
+                break;
+            }
+        }
+
+        int[] result = new int[j - i];
+        for (int k = 0; i < j; i++, k++) {
+            result[k] = get(i);
+        }
+
+        return result;
+    }
+    public int[] headSet(final int element) {
+        if (element <= get(0)) {
+            return new int[] {};
+        }
+
+        int i = 0;
+        for (; i < size(); i++) {
+            if (get(i) >= element) {
+                break;
+            }
+        }
+
+        return Arrays.copyOf(getArray(), i);
+
+    }
+    public int last() {
+        if (this.size() == 0) {
+            System.out.println("Set Empty Exception");
+            return get(this.size() - 1);
+        }
+        return get(this.size() - 1);
+
+
+    }
 
 }
-class Solution{
-	public static void main(String[] args) {
-		Sortedset obj = new Sortedset();
-		Scanner sc = new Scanner(System.in);
-		int lines = Integer.parseInt(sc.nextLine());
-		while(lines>0){
-			String[] value = sc.nextLine().split(" ");//addAll -1,-2,3,-7,-9,6,9
-			switch(value[0]){
-				case "addAll":
-				String[] vals =  value[1].split(",");
-				int[] ints =  new int[vals.length];
-				for(int i =0;i< vals.length;i++){
-					ints[i] =Integer.parseInt(vals[i]);
-				}
-				obj.addAll(ints);
-				break;
-				case "subSet":
-				String[] val1s =  value[1].split(",");
-				int[] int1s =  new int[val1s.length];
-				for(int i =0;i< val1s.length;i++){
-					int1s[i] =Integer.parseInt(val1s[i]);
-				}
-				int[]  a  = obj.subset(int1s[0],int1s[1]);
-				if(a!=null){
-					System.out.println(Arrays.toString(a));
-				}
 
-				break;
-				case "last":
-				obj.last();
-				break;
-				case "headSet":
-				Arrays.toString(obj.headSet(Integer.parseInt(value[1])));
-				break;
-				case "print":
-				System.out.println(obj);
-				break;
-			}
+public final class Solution {
+    private Solution() {
 
-			lines--;
-		}
-	}
+    }
+    /**
+     * helper function to convert string input to int array.
+     *
+     * @param      s     { string input from test case file }
+     *
+     * @return     { int array from the given string }
+     */
+    public static int[] intArray(final String s) {
+        String input = s;
+        if (input.equals("[]")) {
+            return new int[0];
+        }
+        if (s.contains("[")) {
+            input = s.substring(1, s.length() - 1);
+        }
+        return Arrays.stream(input.split(","))
+               .mapToInt(Integer::parseInt)
+               .toArray();
+    }
+    /**
+     * main function to execute test cases.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        // instantiate this set
+        SortedSet s = new SortedSet();
+        // code to read the test cases input file
+        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+        // check if there is one more line to process
+        while (sc.hasNext()) {
+            // read the line
+            String line = sc.nextLine();
+            // split the line using space
+            String[] tokens = line.split(" ");
+            // based on the list operation invoke the corresponding method
+            switch (tokens[0]) {
+            case "print":
+                System.out.println(s);
+                break;
+            case "add":
+                int[] intArray = intArray(tokens[1]);
+                s.add(intArray[0]);
+                break;
+            case "addAll":
+                intArray = intArray(tokens[1]);
+                s.addAll(intArray);
+                break;
+            case "subSet":
+                intArray = intArray(tokens[1]);
+                int[] subsetarray = s.subSet(intArray[0], intArray[1]);
+                if (subsetarray != null) {
+                    System.out.println(Arrays.toString(subsetarray).
+                                       replace("[", "{").replace("]", "}"));
+                }
+                break;
+            case "headSet":
+                intArray = intArray(tokens[1]);
+                System.out.println(Arrays.toString(
+                                       s.headSet(intArray[0])).replace(
+                                       "[", "{").replace("]", "}"));
+                break;
+            case "last":
+                System.out.println(s.last());
+            default:
+                break;
+            }
+        }
+    }
 }
