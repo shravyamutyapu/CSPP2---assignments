@@ -149,6 +149,9 @@ class SortedSet extends Set {
  */
 
 public final class Solution {
+    /**
+     *default constructor.
+     */
     private Solution() {
 
     }
