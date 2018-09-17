@@ -261,7 +261,7 @@ public final class Solution {
 		int crct = Integer.parseInt(lines[2]);
 		int maxmar = Integer.parseInt(lines[3]);
 		int penalty2 = Integer.parseInt(lines[4]);
-		if(lines.length!=5){
+		if(lines.length!=5 || lines[0].equals("")){
             	System.out.println("Error! Malformed question");
             }
 		else if(maxmar<=0) {
@@ -280,7 +280,6 @@ public final class Solution {
 			else if(crct>4){
 				System.out.println("Error! Correct answer choice number is out of range for "+lines[0]);
 			}
-
 			else {for (int i = 0; i < q; i++) {
 				Question questobj = new Question(lines[0], var1, crct, maxmar, penalty2);
 				quiz.addQuestion(questobj);
