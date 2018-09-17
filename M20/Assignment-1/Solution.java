@@ -72,7 +72,7 @@ class Question {
 	 * @return     The correct answer.
 	 */
 	public String getCorrectAnswer() {
-		String crctans = correctAnswer +"";
+		String crctans = correctAnswer + "";
 		return crctans;
 
 	}
@@ -252,28 +252,26 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
-		if(q==0) {
+		if (q == 0) {
 			System.out.println("Quiz does not have questions");
+		} else {
+			String[] lines = scan.nextLine().split(":");
+			String[] var1 = lines[1].split(",");
+			if (var1.length < 2) {
+				System.out.println(lines[0] + "does not have enough answer choices");
+				return;
+			}
+			int new2 = Integer.parseInt(lines[2]);
+			int new3 = Integer.parseInt(lines[3]);
+			int new4 = Integer.parseInt(lines[4]);
+			for (int i = 0; i < q; i++) {
+				Question questobj = new Question(lines[0], var1, new2, new3, new4);
+				quiz.addQuestion(questobj);
+
+			}
 		}
-		// String[] lines = scan.nextLine().split(":");
-		// String[] var1 = lines[1].split(",");
-		// if(getChoice().length<response) {
-		// 	System.out.println("trick question  does not have enough answer choices");
-		// 	return;
-		// }
-	// 	int new2 = Integer.parseInt(lines[2]);
-	// 	int new3 = Integer.parseInt(lines[3]);
-	// 	int new4 = Integer.parseInt(lines[4]);
 
- //        if(q>0){
-	// 	for (int i = 0; i < q; i++) {
-	// 		Question questobj = new Question(lines[0],var1,new2,new3,new4);
-	// 		quiz.addQuestion(questobj);
-	// 		//System.out.println(questobj);
-	// 	}
-	// }
-
-	 }
+	}
 	/**
 	 * Starts a quiz.
 	 *
