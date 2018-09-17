@@ -98,7 +98,7 @@ class Question {
 	 * @return     The maximum marks.
 	 */
 	public int getMaxMarks() {
-		return maxMarks;
+		return this.maxMarks;
 	}
 	/**
 	 * Gets the penalty.
@@ -106,7 +106,7 @@ class Question {
 	 * @return     The penalty.
 	 */
 	public int getPenalty() {
-		return penalty;
+		return this.penalty;
 	}
 	/**
 	 * Sets the response.
@@ -252,26 +252,33 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
+		String[] lines = scan.nextLine().split(":");
+		String[] var1 = lines[1].split(",");
+		int crct = Integer.parseInt(lines[2]);
+		int maxmar = Integer.parseInt(lines[3]);
+		int penalty2 = Integer.parseInt(lines[4]);
 		if (q == 0) {
 			System.out.println("Quiz does not have questions");
-		} else {
-			String[] lines = scan.nextLine().split(":");
-			String[] var1 = lines[1].split(",");
+		}else if(maxmar<=0) System.out.println("Invalid max marks for "+lines[0]);
+		else if(penalty2 > 0) System.out.println("Invalid penalty for "+lines[0]);
+
+		else {
+
 			if (var1.length < 2) {
 				System.out.println(lines[0] + " does not have enough answer choices");
 				return;
 			}
-			int new2 = Integer.parseInt(lines[2]);
-			int new3 = Integer.parseInt(lines[3]);
-			int new4 = Integer.parseInt(lines[4]);
+
+
 			for (int i = 0; i < q; i++) {
-				Question questobj = new Question(lines[0], var1, new2, new3, new4);
+				Question questobj = new Question(lines[0], var1, crct, maxmar, penalty2);
 				quiz.addQuestion(questobj);
 
 			}
 		}
 
 	}
+
 	/**
 	 * Starts a quiz.
 	 *
