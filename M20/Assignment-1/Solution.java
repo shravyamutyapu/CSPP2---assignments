@@ -258,7 +258,7 @@ public final class Solution {
 			String[] lines = scan.nextLine().split(":");
 			String[] var1 = lines[1].split(",");
 			if (var1.length < 2) {
-				System.out.println(lines[0] + "does not have enough answer choices");
+				System.out.println(lines[0] + " does not have enough answer choices");
 				return;
 			}
 			int new2 = Integer.parseInt(lines[2]);
