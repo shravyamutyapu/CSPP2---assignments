@@ -189,7 +189,7 @@ class Quiz {
             if (questions[i].evaluateResponse(
                 this.questions[i].getResponse())) {
                 System.out.println(
-"Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks());
+" Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks());
                 score += questions[i].getMaxMarks();
                 c++;
             } else {
