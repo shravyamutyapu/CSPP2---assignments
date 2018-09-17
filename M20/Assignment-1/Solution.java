@@ -333,7 +333,7 @@ public final class Solution {
 				System.out.print(choarr[j] + "\t");
 			}
 			System.out.print(choarr[choarr.length - 1]);
-			System.out.println();
+			System.out.println("\n");
 		}
 	}
 }
