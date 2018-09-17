@@ -255,8 +255,8 @@ public final class Solution {
 		if(q==0) {
 			System.out.println("Quiz does not have questions");
 		}
-		String[] lines = scan.nextLine().split(":");
-		String[] var1 = lines[1].split(",");
+		// String[] lines = scan.nextLine().split(":");
+		// String[] var1 = lines[1].split(",");
 		// if(getChoice().length<response) {
 		// 	System.out.println("trick question  does not have enough answer choices");
 		// 	return;
