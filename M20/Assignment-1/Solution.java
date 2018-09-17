@@ -306,7 +306,6 @@ public final class Solution {
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
 		Question q1 = new Question();
-		System.out.println(quiz.showReport());
 		// System.out.println(q);());
 		for(int i = 0;i<q;i++){
 			System.out.println(quiz.getQuestion(i).toString());
