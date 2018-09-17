@@ -260,6 +260,7 @@ public final class Solution {
 		String[] var1 = lines[1].split(",");
 		if(lines.length!=5 || lines[0].equals("")){
             	System.out.println("Error! Malformed question");
+            	return;
             }
 		int crct = Integer.parseInt(lines[2]);
 		int maxmar = Integer.parseInt(lines[3]);
@@ -280,6 +281,7 @@ public final class Solution {
 			}
 			else if(crct>4){
 				System.out.println("Error! Correct answer choice number is out of range for "+lines[0]);
+				return;
 			}
 			else {for (int i = 0; i < q; i++) {
 				Question questobj = new Question(lines[0], var1, crct, maxmar, penalty2);
