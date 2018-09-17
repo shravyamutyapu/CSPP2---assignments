@@ -185,20 +185,20 @@ class Quiz {
 	 */
 	public void showReport() {
 		int score = 0, c = 0;
-		for(int i=0;i<size;i++){
+		for (int i = 0; i < size; i++) {
 			System.out.println(getQuestion(i).getQuestionText());
-			if(questions[i].evaluateResponse(this.questions[i].getResponse())){
-				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
+			if (questions[i].evaluateResponse(this.questions[i].getResponse())) {
+				System.out.println(" Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks());
 				score += questions[i].getMaxMarks();
 				c++;
 			} else {
-			System.out.println(" Wrong Answer! - Penalty: "+questions[i].getPenalty());
+				System.out.println(" Wrong Answer! - Penalty: " + questions[i].getPenalty());
 				score += questions[i].getPenalty();
 				c++;
 			}
 		}
-		if(c>0){
-			System.out.println("Total Score: "+score);
+		if (c > 0) {
+			System.out.println("Total Score: " + score);
 		}
 	}
 	public int getSize() {
@@ -303,7 +303,7 @@ public final class Solution {
 
 			}
 		}
-		System.out.println(q+ " are added to the quiz");
+		System.out.println(q + " are added to the quiz");
 
 		// 	}
 
@@ -324,28 +324,28 @@ public final class Solution {
 		// System.out.println(q);());
 
 		if (quiz.getSize() >= q) {
-		for (int i = 0; i < q; i++) {
-			String response1 = scan.nextLine();
-			quiz.getQuestion(i).setResponse(response1);
-			System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
-			String[] choarr = quiz.getQuestion(i).getChoice();
-			for ( int j = 0; j < choarr.length - 1; j++) {
-				System.out.print(choarr[j] + "\t");
+			for (int i = 0; i < q; i++) {
+				String response1 = scan.nextLine();
+				quiz.getQuestion(i).setResponse(response1);
+				System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
+				String[] choarr = quiz.getQuestion(i).getChoice();
+				for ( int j = 0; j < choarr.length - 1; j++) {
+					System.out.print(choarr[j] + "\t");
+				}
+				System.out.print(choarr[choarr.length - 1]);
+				System.out.println("\n");
 			}
-			System.out.print(choarr[choarr.length - 1]);
-			System.out.println("\n");
 		}
 	}
-}
-/**
- * Displays the score report.
- *
- * @param      quiz     The quiz object
- */
-public static void displayScore(final Quiz quiz) {
-	// write your code here to display the score report using quiz object.
-	quiz.showReport();
+	/**
+	 * Displays the score report.
+	 *
+	 * @param      quiz     The quiz object
+	 */
+	public static void displayScore(final Quiz quiz) {
+		// write your code here to display the score report using quiz object.
+		quiz.showReport();
 
-}
+	}
 }
 
