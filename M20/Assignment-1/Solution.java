@@ -252,6 +252,9 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
+		if(q==0) {
+			System.out.println("Quiz does not have questions");
+		}
 		String[] lines = scan.nextLine().split(":");
 		String[] var1 = lines[1].split(",");
 		// if(getChoice().length<response) {
@@ -261,16 +264,14 @@ public final class Solution {
 		int new2 = Integer.parseInt(lines[2]);
 		int new3 = Integer.parseInt(lines[3]);
 		int new4 = Integer.parseInt(lines[4]);
-		if(q==0) {
-			System.out.println("Quiz does not have questions");
-		}
-		else{
+
+
 		for (int i = 0; i < q; i++) {
 			Question questobj = new Question(lines[0],var1,new2,new3,new4);
 			quiz.addQuestion(questobj);
 			//System.out.println(questobj);
 		}
-	}
+
 	}
 	/**
 	 * Starts a quiz.
