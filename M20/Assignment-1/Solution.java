@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * Class for question.
  */
@@ -90,7 +91,7 @@ class Question {
 	 * @return     The choice.
 	 */
 	public String[] getChoice() {
-		return choices;
+		return this.choices;
 	}
 	/**
 	 * Gets the maximum marks.
@@ -132,7 +133,7 @@ class Question {
 	 */
 	public String toString() {
 		String s = "";
-		return s;
+		return s+=this.questiontext;
 	}
 }
 /**
@@ -183,8 +184,7 @@ class Quiz {
 	 * @return     { description_of_the_return_value }
 	 */
 	public String showReport() {
-		String s = "";
-		return s;
+		return Arrays.toString(questions);
 	}
 
 }
@@ -256,6 +256,7 @@ public final class Solution {
 			System.out.println("Quiz does not have questions");
 			return;
 		}
+		for(int i=0;i<q;i++) {
 		String[] lines = scan.nextLine().split(":");
 		String[] var1 = lines[1].split(",");
 		if(lines.length!=5 || lines[0].equals("")){
@@ -265,7 +266,7 @@ public final class Solution {
 		int crct = Integer.parseInt(lines[2]);
 		int maxmar = Integer.parseInt(lines[3]);
 		int penalty2 = Integer.parseInt(lines[4]);
-
+		//System.out.println(lines[0]);
 		if(maxmar<=0) {
 			System.out.println("Invalid max marks for "+lines[0]);
 			return;
@@ -283,11 +284,11 @@ public final class Solution {
 				System.out.println("Error! Correct answer choice number is out of range for "+lines[0]);
 				return;
 			}
-			else {for (int i = 0; i < q; i++) {
-
+			else {
 				quiz.addQuestion(new Question(lines[0], var1, crct, maxmar, penalty2));
-}
+
 			}
+		}
 	// 	}
 
 	}
@@ -305,16 +306,17 @@ public final class Solution {
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
 		Question q1 = new Question();
+		System.out.println(quiz.showReport());
+		// System.out.println(q);());
 		for(int i = 0;i<q;i++){
+			System.out.println(quiz.getQuestion(i).toString());
 			System.out.println(quiz.getQuestion(i).getQuestionText()+"("+quiz.getQuestion(i).getMaxMarks()+")");
 			String[] choarr = quiz.getQuestion(i).getChoice();
-
-			for( int j=0;j<choarr.length-1;j++){
+			for( int j = 0; j < choarr.length-1; j++) {
                System.out.print(choarr[j]+"\t");
 			}
 			System.out.print(choarr[choarr.length-1]);
 			System.out.println();
-			i++;
 		}
 
 	}
