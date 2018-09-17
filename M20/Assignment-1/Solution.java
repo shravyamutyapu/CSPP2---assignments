@@ -261,19 +261,19 @@ public final class Solution {
 		// 	System.out.println("trick question  does not have enough answer choices");
 		// 	return;
 		// }
-		int new2 = Integer.parseInt(lines[2]);
-		int new3 = Integer.parseInt(lines[3]);
-		int new4 = Integer.parseInt(lines[4]);
+	// 	int new2 = Integer.parseInt(lines[2]);
+	// 	int new3 = Integer.parseInt(lines[3]);
+	// 	int new4 = Integer.parseInt(lines[4]);
 
-        if(q>0){
-		for (int i = 0; i < q; i++) {
-			Question questobj = new Question(lines[0],var1,new2,new3,new4);
-			quiz.addQuestion(questobj);
-			//System.out.println(questobj);
-		}
-	}
+ //        if(q>0){
+	// 	for (int i = 0; i < q; i++) {
+	// 		Question questobj = new Question(lines[0],var1,new2,new3,new4);
+	// 		quiz.addQuestion(questobj);
+	// 		//System.out.println(questobj);
+	// 	}
+	// }
 
-	}
+	 }
 	/**
 	 * Starts a quiz.
 	 *
