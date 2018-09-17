@@ -330,7 +330,7 @@ public final class Solution {
 			System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
 			String[] choarr = quiz.getQuestion(i).getChoice();
 			for ( int j = 0; j < choarr.length - 1; j++) {
-				System.out.print(choarr[j] + "\t\t");
+				System.out.print(choarr[j] + "\t");
 			}
 			System.out.print(choarr[choarr.length - 1]);
 			System.out.println();
