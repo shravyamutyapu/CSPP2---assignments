@@ -258,13 +258,14 @@ public final class Solution {
 		}
 		String[] lines = scan.nextLine().split(":");
 		String[] var1 = lines[1].split(",");
+		if(lines.length!=5 || lines[0].equals("")){
+            	System.out.println("Error! Malformed question");
+            }
 		int crct = Integer.parseInt(lines[2]);
 		int maxmar = Integer.parseInt(lines[3]);
 		int penalty2 = Integer.parseInt(lines[4]);
-		if(lines.length!=5 || lines[0].equals("") || lines[0].equals("")){
-            	System.out.println("Error! Malformed question");
-            }
-		else if(maxmar<=0) {
+
+		if(maxmar<=0) {
 			System.out.println("Invalid max marks for "+lines[0]);
 			return;
 		}
