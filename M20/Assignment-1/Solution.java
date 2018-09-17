@@ -327,7 +327,6 @@ public final class Solution {
 		for (int i = 0; i < q; i++) {
 			String response1 = scan.nextLine();
 			quiz.getQuestion(i).setResponse(response1);
-			System.out.println(quiz.getQuestion(i).toString());
 			System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
 			String[] choarr = quiz.getQuestion(i).getChoice();
 			for ( int j = 0; j < choarr.length - 1; j++) {
