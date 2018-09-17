@@ -184,18 +184,22 @@ class Quiz {
 	 * @return     { description_of_the_return_value }
 	 */
 	public void showReport() {
-		int score = 0;
+		int score = 0, c = 0;
 		for(int i=0;i<size;i++){
-		System.out.println(getQuestion(i).getQuestionText());
-		if(questions[i].evaluateResponse(this.questions[i].getResponse())){
-			System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
-			score += questions[i].getMaxMarks();
-		} else {
-		System.out.println(" Wrong Answer! - Penalty: "+questions[i].getPenalty());
-			score += questions[i].getPenalty();
+			System.out.println(getQuestion(i).getQuestionText());
+			if(questions[i].evaluateResponse(this.questions[i].getResponse())){
+				System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
+				score += questions[i].getMaxMarks();
+				c++;
+			} else {
+			System.out.println(" Wrong Answer! - Penalty: "+questions[i].getPenalty());
+				score += questions[i].getPenalty();
+				c++;
+			}
 		}
+		if(c>0){
 		System.out.println("Total Score: "+score);
-	   }
+	}
 	}
 	public int getSize() {
 		return this.size;
@@ -298,6 +302,7 @@ public final class Solution {
 				quiz.addQuestion(new Question(lines[0], var1, crct, maxmar, penalty2));
 
 			}
+		System.out.println(q+ " are added to the quiz");
 		}
 		// 	}
 
