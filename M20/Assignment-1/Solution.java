@@ -133,7 +133,7 @@ class Question {
      */
     public String toString() {
         String s = "";
-        return s += this.questiontext;
+        return s + this.questiontext;
     }
 }
 /**
@@ -180,16 +180,15 @@ class Quiz {
     }
     /**
      * Shows the report.
-     *
-     * @return     { description_of_the_return_value }
      */
     public void showReport() {
         int score = 0, c = 0;
         for (int i = 0; i < size; i++) {
             System.out.println(getQuestion(i).getQuestionText());
-            if (questions[i].evaluateResponse(this.questions[i].getResponse())) {
+            if (questions[i].evaluateResponse(
+                this.questions[i].getResponse())) {
                 System.out.println(
-                    " Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks());
+"Correct Answer! - Marks Awarded: " + questions[i].getMaxMarks());
                 score += questions[i].getMaxMarks();
                 c++;
             } else {
@@ -203,6 +202,9 @@ class Quiz {
             System.out.println("Total Score: " + score);
         }
     }
+    /**
+     * @return int.
+     */
     public int getSize() {
         return this.size;
     }
@@ -297,8 +299,8 @@ public final class Solution {
                 System.out.println("Invalid penalty for " + lines[0]);
                 return;
             } else if (var1.length < two) {
-                System.out.println
-                (lines[0] + " does not have enough answer choices");
+                System.out.println(lines[0] +
+    " does not have enough answer choices");
                 return;
             } else if (crct > four) {
 System.out.println("Error! Correct answer choice number is out of range for "
