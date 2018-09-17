@@ -59,9 +59,7 @@ class Question {
 	 * @return     { description_of_the_return_value }
 	 */
 	public boolean evaluateResponse(final String choice) {
-		String[] val = choice.split(" ");
-		int val1 = Integer.parseInt(val[1]);
-		if (correctAnswer == val1) {
+		if(choice.equals(getResponse())){
 			return true;
 		}
 		return false;
@@ -72,8 +70,10 @@ class Question {
 	 * @return     The correct answer.
 	 */
 	public String getCorrectAnswer() {
-		String crctans = correctAnswer + "";
-		return crctans;
+		if(this.choices.length>=this.correctAnswer){
+			return this.choices[this.correctAnswer-1];
+		}
+		return null;
 
 	}
 	/**
@@ -114,7 +114,7 @@ class Question {
 	 * @param      answer  The answer
 	 */
 	public void setResponse(final String answer) {
-
+			this.response = answer;
 
 	}
 	/**
@@ -123,7 +123,7 @@ class Question {
 	 * @return     The response.
 	 */
 	public String getResponse() {
-		return null;
+		return this.response;
 	}
 	/**
 	 * Returns a string representation of the object.
@@ -165,7 +165,7 @@ class Quiz {
 	 * @param      q     The question
 	 */
 	public void addQuestion(final Question q) {
-
+         questions[size++]=q;
 	}
 	/**
 	 * Gets the question.
@@ -175,7 +175,7 @@ class Quiz {
 	 * @return     The question.
 	 */
 	public Question getQuestion(final int index) {
-		return null;
+		return questions[index];
 	}
 	/**
 	 * Shows the report.
@@ -284,8 +284,8 @@ public final class Solution {
 				return;
 			}
 			else {for (int i = 0; i < q; i++) {
-				Question questobj = new Question(lines[0], var1, crct, maxmar, penalty2);
-				quiz.addQuestion(questobj);
+
+				quiz.addQuestion(new Question(lines[0], var1, crct, maxmar, penalty2));
 }
 			}
 	// 	}
@@ -304,6 +304,17 @@ public final class Solution {
 		// write your code here to display the quiz questions on the console.
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
+		Question q1 = new Question();
+		for(int i = 0;i<q;i++){
+			System.out.println(quiz.getQuestion(i).getQuestionText()+"("+quiz.getQuestion(i).getMaxMarks()+")");
+			String[] choarr = quiz.getQuestion(i).getChoice();
+			for( int j=0;j<choarr.length-1;j++){
+               System.out.print(choarr[i]+"\t");
+			}
+			System.out.print(choarr[choarr.length-1]);
+			System.out.println();
+		}
+
 	}
 	/**
 	 * Displays the score report.
@@ -312,7 +323,7 @@ public final class Solution {
 	 */
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report using quiz object.
-		//int totalScore = totalScore + score[i];
+
 	}
 }
 
