@@ -193,13 +193,13 @@ class Quiz {
 				c++;
 			} else {
 			System.out.println(" Wrong Answer! - Penalty: "+questions[i].getPenalty());
-				score += questions[i].getPenalty();
+				score -= questions[i].getPenalty();
 				c++;
 			}
 		}
 		if(c>0){
-		System.out.println("Total Score: "+score);
-	}
+			System.out.println("Total Score: "+score);
+		}
 	}
 	public int getSize() {
 		return this.size;
@@ -302,8 +302,9 @@ public final class Solution {
 				quiz.addQuestion(new Question(lines[0], var1, crct, maxmar, penalty2));
 
 			}
-		System.out.println(q+ " are added to the quiz");
 		}
+		System.out.println(q+ " are added to the quiz");
+
 		// 	}
 
 	}
@@ -344,7 +345,6 @@ public final class Solution {
  */
 public static void displayScore(final Quiz quiz) {
 	// write your code here to display the score report using quiz object.
-	for(int i=0;i<quiz.getSize();i++)
 	quiz.showReport();
 
 }
