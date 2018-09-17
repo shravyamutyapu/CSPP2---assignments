@@ -271,6 +271,10 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int five = 5;
+        final int four = 4;
+        final int three = 3;
+        final int two = 2;
         if (q == 0) {
             System.out.println("Quiz does not have questions");
             return;
@@ -278,13 +282,13 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
             String[] lines = scan.nextLine().split(":");
             String[] var1 = lines[1].split(",");
-            if (lines.length != 5 || lines[0].equals("")) {
+            if (lines.length != five || lines[0].equals("")) {
                 System.out.println("Error! Malformed question");
                 return;
             }
-            int crct = Integer.parseInt(lines[2]);
-            int maxmar = Integer.parseInt(lines[3]);
-            int penalty2 = Integer.parseInt(lines[4]);
+            int crct = Integer.parseInt(lines[two]);
+            int maxmar = Integer.parseInt(lines[three]);
+            int penalty2 = Integer.parseInt(lines[four]);
             //System.out.println(lines[0]);
             if (maxmar <= 0) {
                 System.out.println("Invalid max marks for " + lines[0]);
@@ -294,16 +298,17 @@ public final class Solution {
                 return;
             }
 
-            else if (var1.length < 2) {
+            else if (var1.length < two) {
                 System.out.println
                 (lines[0] + " does not have enough answer choices");
                 return;
-            } else if (crct > 4) {
+            } else if (crct > four) {
 System.out.println("Error! Correct answer choice number is out of range for "
  + lines[0]);
                 return;
             } else {
-                quiz.addQuestion(new Question(lines[0], var1, crct, maxmar, penalty2));
+                quiz.addQuestion(new Question(
+            lines[0], var1, crct, maxmar, penalty2));
 
             }
         }
@@ -332,9 +337,9 @@ System.out.println("Error! Correct answer choice number is out of range for "
                 String response1 = scan.nextLine();
                 quiz.getQuestion(i).setResponse(response1);
                 System.out.println(quiz.getQuestion(i).getQuestionText()
-                    +"(" + quiz.getQuestion(i).getMaxMarks() + ")");
+                    + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
                 String[] choarr = quiz.getQuestion(i).getChoice();
-                for ( int j = 0; j < choarr.length - 1; j++) {
+                for (int j = 0; j < choarr.length - 1; j++) {
                     System.out.print(choarr[j] + "\t");
                 }
                 System.out.print(choarr[choarr.length - 1]);
