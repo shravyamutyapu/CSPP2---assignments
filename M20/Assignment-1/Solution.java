@@ -133,7 +133,8 @@ class Question {
      */
     public String toString() {
         String s = "";
-        return s + this.questiontext;
+        s += this.questiontext;
+        return s;
     }
 }
 /**
@@ -299,8 +300,7 @@ public final class Solution {
                 System.out.println("Invalid penalty for " + lines[0]);
                 return;
             } else if (var1.length < two) {
-                System.out.println(lines[0] +
-    " does not have enough answer choices");
+System.out.println(lines[0] + " does not have enough answer choices");
                 return;
             } else if (crct > four) {
 System.out.println("Error! Correct answer choice number is out of range for "
