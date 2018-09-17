@@ -296,9 +296,7 @@ public final class Solution {
             } else if (penalty2 > 0) {
                 System.out.println("Invalid penalty for " + lines[0]);
                 return;
-            }
-
-            else if (var1.length < two) {
+            } else if (var1.length < two) {
                 System.out.println
                 (lines[0] + " does not have enough answer choices");
                 return;
