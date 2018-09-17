@@ -308,11 +308,13 @@ public final class Solution {
 		for(int i = 0;i<q;i++){
 			System.out.println(quiz.getQuestion(i).getQuestionText()+"("+quiz.getQuestion(i).getMaxMarks()+")");
 			String[] choarr = quiz.getQuestion(i).getChoice();
+
 			for( int j=0;j<choarr.length-1;j++){
-               System.out.print(choarr[i]+"\t");
+               System.out.print(choarr[j]+"\t");
 			}
 			System.out.print(choarr[choarr.length-1]);
 			System.out.println();
+			i++;
 		}
 
 	}
