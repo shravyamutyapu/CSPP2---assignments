@@ -265,12 +265,13 @@ public final class Solution {
 		int new3 = Integer.parseInt(lines[3]);
 		int new4 = Integer.parseInt(lines[4]);
 
-
+        if(q>0){
 		for (int i = 0; i < q; i++) {
 			Question questobj = new Question(lines[0],var1,new2,new3,new4);
 			quiz.addQuestion(questobj);
 			//System.out.println(questobj);
 		}
+	}
 
 	}
 	/**
