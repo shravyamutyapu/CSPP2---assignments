@@ -277,6 +277,9 @@ public final class Solution {
 			else if(crct>4){
 				System.out.println("Error! Correct answer choice number is out of range for "+lines[0]);
 			}
+            else if(lines.length!=5){
+            	System.out.println("Error! Malformed question");
+            }
 
 			else {for (int i = 0; i < q; i++) {
 				Question questobj = new Question(lines[0], var1, crct, maxmar, penalty2);
