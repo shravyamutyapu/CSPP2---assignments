@@ -183,8 +183,19 @@ class Quiz {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public String showReport() {
-		return Arrays.toString(questions);
+	public void showReport() {
+		int score = 0;
+		for(int i=0;i<size;i++){
+		System.out.println(getQuestion(i).getQuestionText());
+		if(questions[i].evaluateResponse(this.questions[i].getResponse())){
+			System.out.println(" Correct Answer! - Marks Awarded: "+questions[i].getMaxMarks());
+			score += questions[i].getMaxMarks();
+		} else {
+		System.out.println(" Wrong Answer! - Penalty: "+questions[i].getPenalty());
+			score += questions[i].getPenalty();
+		}
+		System.out.println("Total Score: "+score);
+	   }
 	}
 	public int getSize() {
 		return this.size;
@@ -305,8 +316,11 @@ public final class Solution {
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
 		// System.out.println(q);());
+
 		if (quiz.getSize() >= q) {
 		for (int i = 0; i < q; i++) {
+			String response1 = scan.nextLine();
+			quiz.getQuestion(i).setResponse(response1);
 			System.out.println(quiz.getQuestion(i).toString());
 			System.out.println(quiz.getQuestion(i).getQuestionText() + "(" + quiz.getQuestion(i).getMaxMarks() + ")");
 			String[] choarr = quiz.getQuestion(i).getChoice();
@@ -325,6 +339,8 @@ public final class Solution {
  */
 public static void displayScore(final Quiz quiz) {
 	// write your code here to display the score report using quiz object.
+	for(int i=0;i<quiz.getSize();i++)
+	System.out.println();
 
 }
 }
