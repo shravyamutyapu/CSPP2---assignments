@@ -252,30 +252,35 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
+		if (q == 0) {
+			System.out.println("Quiz does not have questions");
+			return;
+		}
 		String[] lines = scan.nextLine().split(":");
 		String[] var1 = lines[1].split(",");
 		int crct = Integer.parseInt(lines[2]);
 		int maxmar = Integer.parseInt(lines[3]);
 		int penalty2 = Integer.parseInt(lines[4]);
-		if (q == 0) {
-			System.out.println("Quiz does not have questions");
-		}else if(maxmar<=0) System.out.println("Invalid max marks for "+lines[0]);
-		else if(penalty2 > 0) System.out.println("Invalid penalty for "+lines[0]);
+		if(maxmar<=0) {
+			System.out.println("Invalid max marks for "+lines[0]);
+			return;
+		}
+		else if(penalty2 > 0) {
+			System.out.println("Invalid penalty for "+lines[0]);
+			return;
+		}
 
-		else {
-
-			if (var1.length < 2) {
+		else if (var1.length < 2) {
 				System.out.println(lines[0] + " does not have enough answer choices");
 				return;
 			}
 
-
-			for (int i = 0; i < q; i++) {
+			else {for (int i = 0; i < q; i++) {
 				Question questobj = new Question(lines[0], var1, crct, maxmar, penalty2);
 				quiz.addQuestion(questobj);
-
+}
 			}
-		}
+	// 	}
 
 	}
 
@@ -302,3 +307,4 @@ public final class Solution {
 		//int totalScore = totalScore + score[i];
 	}
 }
+
