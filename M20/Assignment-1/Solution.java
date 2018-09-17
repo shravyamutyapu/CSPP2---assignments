@@ -193,7 +193,7 @@ class Quiz {
 				c++;
 			} else {
 			System.out.println(" Wrong Answer! - Penalty: "+questions[i].getPenalty());
-				score -= questions[i].getPenalty();
+				score += questions[i].getPenalty();
 				c++;
 			}
 		}
