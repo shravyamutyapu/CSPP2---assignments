@@ -261,7 +261,7 @@ public final class Solution {
 		int crct = Integer.parseInt(lines[2]);
 		int maxmar = Integer.parseInt(lines[3]);
 		int penalty2 = Integer.parseInt(lines[4]);
-		if(lines.length!=5 || lines[0].equals("")){
+		if(lines.length!=5 || lines[0].equals("") || lines[0].equals("")){
             	System.out.println("Error! Malformed question");
             }
 		else if(maxmar<=0) {
