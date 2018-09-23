@@ -12,13 +12,25 @@ class Task {
     private boolean urgent;
     private String status;
     Task() { }
-    Task(String title1, String assignedTo1, int timeToComplete1, boolean important1, boolean urgent1, String status1){
-        this.title = title1;
+    Task(String title1, String assignedTo1, int timeToComplete1, boolean important1, boolean urgent1, String status1) throws Exception{
+        if(title1.length()==0) {
+            throw new Exception("Title not provided");
+        } else {
+           this.title = title1;
+        }
         this.assignedTo = assignedTo1;
+        if(timeToComplete1 < 0) {
+            throw new Exception("Invalid timeToComplete "+timeToComplete1);
+        }
         this.timeToComplete = timeToComplete1;
         this.important = important1;
         this.urgent = urgent1;
-        this.status = status1;
+        if(status.equals("todo")|| status.equals("done")) {
+            this.status = status1;
+        } else {
+            throw new Exception("Invalid status "+status1);
+        }
+
     }
         public String getTitle(){
             return this.title;
@@ -38,37 +50,53 @@ class Task {
         public boolean geturgent(){
             return this.urgent;
         }
-
-
-    public String toString1()throws Exception {
-        String s = "";
-        if (title != null) {
-            s = title + ", " + assignedTo + ", ";
+        public String getImpStatus() {
+            if(this.important) {
+                return "Important";
+            } else {
+                return "Not Important";
+            }
         }
-        else{
-            throw new Exception(" Title not provided ");
+        public String getUrgStat() {
+            if(this.urgent) {
+                return "Urgent";
+            } else {
+                return "Not Urgent";
+            }
         }
-        if (timeToComplete > 0) {
-            s += timeToComplete + ", ";
-        }
-        else{
-            throw new Exception ("Invalid timeToComplete "+timeToComplete);
-        }
-        if (important) {
-            s += "Important" + ", ";
-        } else s += "Not Important" + ", ";
-        if (urgent) {
-            s += "Urgent" + ", ";
-        } else s += "Not Urgent" + ", ";
-        if(status.equals("todo")|| status.equals("done")) {
-            s += status;
-        }
-        else{
-            throw new Exception("Invalid status "+status);
+        public String toString(){
+            return getTitle()+", "+getassignedTo()+", "+gettimeToComplete()+", "+getImpStatus()+", "+getUrgStat()+", "+getStatus();
         }
 
-    return s;
-}
+    // public String toString()throws Exception {
+    //     String s = "";
+    //     if (title != null) {
+    //         s = title + ", " + assignedTo + ", ";
+    //     }
+    //     else{
+    //         throw new Exception(" Title not provided ");
+    //     }
+    //     if (timeToComplete > 0) {
+    //         s += timeToComplete + ", ";
+    //     }
+    //     else{
+    //         throw new Exception ("Invalid timeToComplete "+timeToComplete);
+    //     }
+    //     if (important) {
+    //         s += "Important" + ", ";
+    //     } else s += "Not Important" + ", ";
+    //     if (urgent) {
+    //         s += "Urgent" + ", ";
+    //     } else s += "Not Urgent" + ", ";
+    //     if(status.equals("todo")|| status.equals("done")) {
+    //         s += status;
+    //     }
+    //     else{
+    //         throw new Exception("Invalid status "+status);
+    //     }
+
+    // return s;
+//}
 }
 
 
