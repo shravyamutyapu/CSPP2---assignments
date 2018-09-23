@@ -12,7 +12,7 @@ class Task {
     private boolean urgent;
     private String status;
     Task() { }
-    Task(String title1, String assignedTo1, int timeToComplete1, boolean important1, boolean urgent1, String status1)throws Exception {
+    Task(String title1, String assignedTo1, int timeToComplete1, boolean important1, boolean urgent1, String status1){
         this.title = title1;
         this.assignedTo = assignedTo1;
         this.timeToComplete = timeToComplete1;
@@ -20,36 +20,57 @@ class Task {
         this.urgent = urgent1;
         this.status = status1;
     }
-    public String toString() {
+        public String getTitle(){
+            return this.title;
+        }
+         public String getassignedTo(){
+            return this.assignedTo;
+        }
+        public String getStatus(){
+            return this.status;
+        }
+        public int gettimeToComplete(){
+            return this.timeToComplete;
+        }
+        public boolean getimportant(){
+            return this.important;
+        }
+        public boolean geturgent(){
+            return this.urgent;
+        }
+
+
+    public String toString1()throws Exception {
         String s = "";
         if (title != null) {
             s = title + ", " + assignedTo + ", ";
         }
-        // else{
-        //     throw new Exception(" Title not provided ");
-        // }
+        else{
+            throw new Exception(" Title not provided ");
+        }
         if (timeToComplete > 0) {
             s += timeToComplete + ", ";
         }
-        // else{
-        //     ("throw new Exception Invalid timeToComplete "+timeToComplete);
-        // }
+        else{
+            throw new Exception ("Invalid timeToComplete "+timeToComplete);
+        }
         if (important) {
             s += "Important" + ", ";
         } else s += "Not Important" + ", ";
         if (urgent) {
             s += "Urgent" + ", ";
         } else s += "Not Urgent" + ", ";
-
-        s += status;
-
-        // else{
-        //     throw new Exception("Invalid status "+status);
-        // }
+        if(status.equals("todo")|| status.equals("done")) {
+            s += status;
+        }
+        else{
+            throw new Exception("Invalid status "+status);
+        }
 
     return s;
 }
 }
+
 
 
 /**
