@@ -64,14 +64,14 @@ class Task {
                 return "Not Urgent";
             }
         }
-        public String setTitle(String t) {
-            return this.title = t;
+        public String setTitle(String title1) {
+            return this.title = title1;
         }
-        public int settimeToComplete(int t){
-            return this.timeToComplete = t;
+        public int settimeToComplete(int timeToComplete1){
+            return this.timeToComplete = timeToComplete1;
         }
-        public String setStatus(String s) {
-            return this.status = s;
+        public String setStatus(String status1) {
+            return this.status = status1;
         }
         public String toString(){
             return getTitle()+", "+getassignedTo()+", "+gettimeToComplete()+", "+getImpStatus()+", "+getUrgStat()+", "+getStatus();
