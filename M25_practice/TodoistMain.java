@@ -64,9 +64,6 @@ class Task {
                 return "Not Urgent";
             }
         }
-        public String toString(){
-            return getTitle()+", "+getassignedTo()+", "+gettimeToComplete()+", "+getImpStatus()+", "+getUrgStat()+", "+getStatus();
-        }
         public String setTitle(String t) {
             return this.title = t;
         }
@@ -75,6 +72,9 @@ class Task {
         }
         public String setStatus(String s) {
             return this.status = s;
+        }
+        public String toString(){
+            return getTitle()+", "+getassignedTo()+", "+gettimeToComplete()+", "+getImpStatus()+", "+getUrgStat()+", "+getStatus();
         }
     // public String toString()throws Exception {
     //     String s = "";
