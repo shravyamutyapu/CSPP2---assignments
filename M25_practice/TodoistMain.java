@@ -51,14 +51,14 @@ class Task {
             return this.urgent;
         }
         public String getImpStatus() {
-            if(this.important) {
+            if(this.important==true) {
                 return "Important";
             } else {
                 return "Not Important";
             }
         }
         public String getUrgStat() {
-            if(this.urgent) {
+            if(this.urgent==true) {
                 return "Urgent";
             } else {
                 return "Not Urgent";
