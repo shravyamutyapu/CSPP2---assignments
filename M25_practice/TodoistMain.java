@@ -67,7 +67,15 @@ class Task {
         public String toString(){
             return getTitle()+", "+getassignedTo()+", "+gettimeToComplete()+", "+getImpStatus()+", "+getUrgStat()+", "+getStatus();
         }
-
+        public String setTitle(String t) {
+            return this.title = t;
+        }
+        public int settimeToComplete(int t){
+            return this.timeToComplete = t;
+        }
+        public String setStatus(String s) {
+            return this.status = s;
+        }
     // public String toString()throws Exception {
     //     String s = "";
     //     if (title != null) {
